@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.model.mutation.Mutation;
-import com.google.firebase.firestore.model.mutation.Overlay;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.model.mutation.Mutation;
+import com.aves.flamingodb.model.mutation.Overlay;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;

@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.model.mutation;
 
-import com.google.firebase.firestore.model.FieldPath;
+import com.aves.flamingodb.model.FieldPath;
 import java.util.HashSet;
 import java.util.Set;
 

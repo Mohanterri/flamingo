@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import android.app.Activity;
 import androidx.annotation.GuardedBy;
@@ -32,8 +32,8 @@ import com.google.android.gms.tasks.SuccessContinuation;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
 import com.google.android.gms.tasks.TaskExecutors;
-import com.google.firebase.firestore.LoadBundleTaskProgress;
-import com.google.firebase.firestore.OnProgressListener;
+import com.aves.flamingodb.LoadBundleTaskProgress;
+import com.aves.flamingodb.OnProgressListener;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

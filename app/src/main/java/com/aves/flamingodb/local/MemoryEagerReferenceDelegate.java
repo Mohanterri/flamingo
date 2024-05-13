@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.local;
 
-import com.google.firebase.firestore.core.ListenSequence;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.core.ListenSequence;
+import com.aves.flamingodb.model.DocumentKey;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;

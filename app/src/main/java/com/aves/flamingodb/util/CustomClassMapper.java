@@ -14,21 +14,21 @@
 
 package com.aves.flamingodb.util;
 
-import static com.google.firebase.firestore.util.ApiUtil.invoke;
-import static com.google.firebase.firestore.util.ApiUtil.newInstance;
+import static com.aves.flamingodb.util.ApiUtil.invoke;
+import static com.aves.flamingodb.util.ApiUtil.newInstance;
 
 import android.net.Uri;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.Blob;
-import com.google.firebase.firestore.DocumentId;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.Exclude;
-import com.google.firebase.firestore.FieldValue;
-import com.google.firebase.firestore.GeoPoint;
-import com.google.firebase.firestore.IgnoreExtraProperties;
-import com.google.firebase.firestore.PropertyName;
-import com.google.firebase.firestore.ServerTimestamp;
-import com.google.firebase.firestore.ThrowOnExtraProperties;
+import com.aves.flamingodb.Blob;
+import com.aves.flamingodb.DocumentId;
+import com.aves.flamingodb.DocumentReference;
+import com.aves.flamingodb.Exclude;
+import com.aves.flamingodb.FieldValue;
+import com.aves.flamingodb.GeoPoint;
+import com.aves.flamingodb.IgnoreExtraProperties;
+import com.aves.flamingodb.PropertyName;
+import com.aves.flamingodb.ServerTimestamp;
+import com.aves.flamingodb.ThrowOnExtraProperties;
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

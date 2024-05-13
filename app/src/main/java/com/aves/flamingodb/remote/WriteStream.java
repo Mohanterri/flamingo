@@ -14,14 +14,14 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.model.mutation.Mutation;
-import com.google.firebase.firestore.model.mutation.MutationResult;
-import com.google.firebase.firestore.util.AsyncQueue;
-import com.google.firebase.firestore.util.AsyncQueue.TimerId;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.model.mutation.Mutation;
+import com.aves.flamingodb.model.mutation.MutationResult;
+import com.aves.flamingodb.util.AsyncQueue;
+import com.aves.flamingodb.util.AsyncQueue.TimerId;
 import com.google.firestore.v1.FirestoreGrpc;
 import com.google.firestore.v1.WriteRequest;
 import com.google.firestore.v1.WriteResponse;

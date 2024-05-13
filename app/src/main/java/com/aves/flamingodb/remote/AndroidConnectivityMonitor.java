@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -31,8 +31,8 @@ import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.util.Consumer;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.util.Consumer;
+import com.aves.flamingodb.util.Logger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;

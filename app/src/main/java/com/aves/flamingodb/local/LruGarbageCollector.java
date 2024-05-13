@@ -16,10 +16,10 @@ package com.aves.flamingodb.local;
 
 import android.util.SparseArray;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
-import com.google.firebase.firestore.core.ListenSequence;
-import com.google.firebase.firestore.util.AsyncQueue;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.FirebaseFirestoreSettings;
+import com.aves.flamingodb.core.ListenSequence;
+import com.aves.flamingodb.util.AsyncQueue;
+import com.aves.flamingodb.util.Logger;
 import java.util.Comparator;
 import java.util.Locale;
 import java.util.PriorityQueue;

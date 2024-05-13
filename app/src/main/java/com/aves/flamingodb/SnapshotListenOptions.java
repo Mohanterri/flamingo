@@ -14,12 +14,12 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import android.app.Activity;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.util.Executors;
+import com.aves.flamingodb.util.Executors;
 import java.util.concurrent.Executor;
 
 /**

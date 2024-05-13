@@ -17,8 +17,8 @@ package com.aves.flamingodb;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.google.firebase.firestore.MemoryEagerGcSettings;
-import com.google.firebase.firestore.MemoryGarbageCollectorSettings;
+import com.aves.flamingodb.MemoryEagerGcSettings;
+import com.aves.flamingodb.MemoryGarbageCollectorSettings;
 
 /**
  * Configures the SDK to use a memory cache. Firestore documents and mutations are NOT persisted

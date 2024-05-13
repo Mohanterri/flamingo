@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.core;
 
-import com.google.firebase.firestore.model.Document;
+import com.aves.flamingodb.model.Document;
 
 /** A change to a single document's state within a view. */
 public class DocumentViewChange {

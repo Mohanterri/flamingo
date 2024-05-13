@@ -14,9 +14,9 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Util.compareIntegers;
+import static com.aves.flamingodb.util.Util.compareIntegers;
 
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.model.DocumentKey;
 import java.util.Comparator;
 
 /**

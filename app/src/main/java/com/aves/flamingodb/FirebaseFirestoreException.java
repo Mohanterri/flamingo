@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import android.util.SparseArray;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.firebase.FirebaseException;
-import com.google.firebase.firestore.util.Assert;
+import com.aves.flamingodb.util.Assert;
 
 /** A class of exceptions thrown by Cloud Firestore. */
 public class FirebaseFirestoreException extends FirebaseException {

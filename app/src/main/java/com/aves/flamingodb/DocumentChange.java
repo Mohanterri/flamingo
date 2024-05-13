@@ -14,19 +14,19 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.MetadataChanges;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.core.DocumentViewChange;
-import com.google.firebase.firestore.core.ViewSnapshot;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentSet;
+import com.aves.flamingodb.FirebaseFirestore;
+import com.aves.flamingodb.MetadataChanges;
+import com.aves.flamingodb.QueryDocumentSnapshot;
+import com.aves.flamingodb.core.DocumentViewChange;
+import com.aves.flamingodb.core.ViewSnapshot;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentSet;
 import java.util.ArrayList;
 import java.util.List;
 

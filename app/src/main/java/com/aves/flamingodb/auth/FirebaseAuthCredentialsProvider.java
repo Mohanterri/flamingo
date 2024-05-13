@@ -25,9 +25,9 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.auth.internal.IdTokenListener;
 import com.google.firebase.auth.internal.InternalAuthProvider;
-import com.google.firebase.firestore.util.Executors;
-import com.google.firebase.firestore.util.Listener;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.util.Executors;
+import com.aves.flamingodb.util.Listener;
+import com.aves.flamingodb.util.Logger;
 import com.google.firebase.inject.Deferred;
 import com.google.firebase.inject.Provider;
 

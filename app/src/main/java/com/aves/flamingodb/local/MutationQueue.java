@@ -16,10 +16,10 @@ package com.aves.flamingodb.local;
 
 import androidx.annotation.Nullable;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.core.Query;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.mutation.Mutation;
-import com.google.firebase.firestore.model.mutation.MutationBatch;
+import com.aves.flamingodb.core.Query;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.mutation.Mutation;
+import com.aves.flamingodb.model.mutation.MutationBatch;
 import com.google.protobuf.ByteString;
 import java.util.List;
 

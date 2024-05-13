@@ -14,12 +14,12 @@
 
 package com.aves.flamingodb.util;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
-import com.google.firebase.firestore.core.CompositeFilter;
-import com.google.firebase.firestore.core.FieldFilter;
-import com.google.firebase.firestore.core.Filter;
-import com.google.firebase.firestore.core.InFilter;
+import com.aves.flamingodb.core.CompositeFilter;
+import com.aves.flamingodb.core.FieldFilter;
+import com.aves.flamingodb.core.Filter;
+import com.aves.flamingodb.core.InFilter;
 import com.google.firestore.v1.Value;
 import java.util.ArrayList;
 import java.util.Arrays;

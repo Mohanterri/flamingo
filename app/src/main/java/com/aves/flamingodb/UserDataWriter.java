@@ -14,27 +14,27 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.model.ServerTimestamps.getLocalWriteTime;
-import static com.google.firebase.firestore.model.ServerTimestamps.getPreviousValue;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_ARRAY;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_BLOB;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_BOOLEAN;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_GEOPOINT;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_MAP;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_NULL;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_NUMBER;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_REFERENCE;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_SERVER_TIMESTAMP;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_STRING;
-import static com.google.firebase.firestore.model.Values.TYPE_ORDER_TIMESTAMP;
-import static com.google.firebase.firestore.model.Values.typeOrder;
-import static com.google.firebase.firestore.util.Assert.fail;
+import static com.aves.flamingodb.model.ServerTimestamps.getLocalWriteTime;
+import static com.aves.flamingodb.model.ServerTimestamps.getPreviousValue;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_ARRAY;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_BLOB;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_BOOLEAN;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_GEOPOINT;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_MAP;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_NULL;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_NUMBER;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_REFERENCE;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_SERVER_TIMESTAMP;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_STRING;
+import static com.aves.flamingodb.model.Values.TYPE_ORDER_TIMESTAMP;
+import static com.aves.flamingodb.model.Values.typeOrder;
+import static com.aves.flamingodb.util.Assert.fail;
 
 import androidx.annotation.RestrictTo;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.model.DatabaseId;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.model.DatabaseId;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.util.Logger;
 import com.google.firestore.v1.ArrayValue;
 import com.google.firestore.v1.Value;
 import java.util.ArrayList;

@@ -14,9 +14,9 @@
 
 package com.aves.flamingodb;
 
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.WriteBatch;
+import com.aves.flamingodb.DocumentReference;
+import com.aves.flamingodb.DocumentSnapshot;
+import com.aves.flamingodb.WriteBatch;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.local;
 
-import com.google.firebase.firestore.auth.User;
-import com.google.firebase.firestore.util.Supplier;
+import com.aves.flamingodb.auth.User;
+import com.aves.flamingodb.util.Supplier;
 
 /**
  * Persistence is the lowest-level shared interface to persistent storage in Firestore.

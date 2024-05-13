@@ -15,8 +15,8 @@
 package com.aves.flamingodb.local;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.bundle.BundleMetadata;
-import com.google.firebase.firestore.bundle.NamedQuery;
+import com.aves.flamingodb.bundle.BundleMetadata;
+import com.aves.flamingodb.bundle.NamedQuery;
 import java.util.HashMap;
 import java.util.Map;
 

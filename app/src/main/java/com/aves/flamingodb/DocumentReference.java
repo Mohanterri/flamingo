@@ -14,9 +14,9 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
-import static com.google.firebase.firestore.util.Util.voidErrorTransformer;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Util.voidErrorTransformer;
 import static java.util.Collections.singletonList;
 
 import android.app.Activity;
@@ -25,34 +25,34 @@ import androidx.annotation.Nullable;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
 import com.google.android.gms.tasks.Tasks;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FieldPath;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.FirebaseFirestoreException.Code;
-import com.google.firebase.firestore.ListenSource;
-import com.google.firebase.firestore.ListenerRegistration;
-import com.google.firebase.firestore.MetadataChanges;
-import com.google.firebase.firestore.SetOptions;
-import com.google.firebase.firestore.SnapshotListenOptions;
-import com.google.firebase.firestore.Source;
-import com.google.firebase.firestore.core.ActivityScope;
-import com.google.firebase.firestore.core.AsyncEventListener;
-import com.google.firebase.firestore.core.EventManager.ListenOptions;
-import com.google.firebase.firestore.core.ListenerRegistrationImpl;
-import com.google.firebase.firestore.core.QueryListener;
-import com.google.firebase.firestore.core.UserData.ParsedSetData;
-import com.google.firebase.firestore.core.UserData.ParsedUpdateData;
-import com.google.firebase.firestore.core.ViewSnapshot;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.model.mutation.DeleteMutation;
-import com.google.firebase.firestore.model.mutation.Precondition;
-import com.google.firebase.firestore.util.Assert;
-import com.google.firebase.firestore.util.Executors;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.DocumentSnapshot;
+import com.aves.flamingodb.EventListener;
+import com.aves.flamingodb.FieldPath;
+import com.aves.flamingodb.FirebaseFirestore;
+import com.aves.flamingodb.FirebaseFirestoreException;
+import com.aves.flamingodb.FirebaseFirestoreException.Code;
+import com.aves.flamingodb.ListenSource;
+import com.aves.flamingodb.ListenerRegistration;
+import com.aves.flamingodb.MetadataChanges;
+import com.aves.flamingodb.SetOptions;
+import com.aves.flamingodb.SnapshotListenOptions;
+import com.aves.flamingodb.Source;
+import com.aves.flamingodb.core.ActivityScope;
+import com.aves.flamingodb.core.AsyncEventListener;
+import com.aves.flamingodb.core.EventManager.ListenOptions;
+import com.aves.flamingodb.core.ListenerRegistrationImpl;
+import com.aves.flamingodb.core.QueryListener;
+import com.aves.flamingodb.core.UserData.ParsedSetData;
+import com.aves.flamingodb.core.UserData.ParsedUpdateData;
+import com.aves.flamingodb.core.ViewSnapshot;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.model.mutation.DeleteMutation;
+import com.aves.flamingodb.model.mutation.Precondition;
+import com.aves.flamingodb.util.Assert;
+import com.aves.flamingodb.util.Executors;
+import com.aves.flamingodb.util.Util;
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -541,7 +541,7 @@ public class DocumentReference {
     AsyncEventListener<ViewSnapshot> asyncListener =
         new AsyncEventListener<>(userExecutor, viewListener);
 
-    com.google.firebase.firestore.core.Query query = asQuery();
+    com.aves.flamingodb.core.Query query = asQuery();
     QueryListener queryListener = firestore.getClient().listen(query, options, asyncListener);
 
     return ActivityScope.bind(
@@ -570,8 +570,8 @@ public class DocumentReference {
     return result;
   }
 
-  private com.google.firebase.firestore.core.Query asQuery() {
-    return com.google.firebase.firestore.core.Query.atPath(key.getPath());
+  private com.aves.flamingodb.core.Query asQuery() {
+    return com.aves.flamingodb.core.Query.atPath(key.getPath());
   }
 
   /** Converts the public API options object to the internal options object. */

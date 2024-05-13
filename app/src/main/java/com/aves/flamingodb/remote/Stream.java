@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.remote;
 
-import com.google.firebase.firestore.remote.Stream.StreamCallback;
+import com.aves.flamingodb.remote.Stream.StreamCallback;
 import io.grpc.Status;
 
 /**

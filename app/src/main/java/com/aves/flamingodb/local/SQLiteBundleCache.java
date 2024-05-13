@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.fail;
 
 import androidx.annotation.Nullable;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.bundle.BundleMetadata;
-import com.google.firebase.firestore.bundle.NamedQuery;
-import com.google.firebase.firestore.model.SnapshotVersion;
+import com.aves.flamingodb.bundle.BundleMetadata;
+import com.aves.flamingodb.bundle.NamedQuery;
+import com.aves.flamingodb.model.SnapshotVersion;
 import com.google.firestore.bundle.BundledQuery;
 import com.google.protobuf.InvalidProtocolBufferException;
 

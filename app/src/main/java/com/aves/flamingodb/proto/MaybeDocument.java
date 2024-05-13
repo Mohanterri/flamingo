@@ -84,11 +84,11 @@ public  final class MaybeDocument extends
    * <code>.firestore.client.NoDocument no_document = 1;</code>
    */
   @Override
-  public com.google.firebase.firestore.proto.NoDocument getNoDocument() {
+  public com.aves.flamingodb.proto.NoDocument getNoDocument() {
     if (documentTypeCase_ == 1) {
-       return (com.google.firebase.firestore.proto.NoDocument) documentType_;
+       return (com.aves.flamingodb.proto.NoDocument) documentType_;
     }
-    return com.google.firebase.firestore.proto.NoDocument.getDefaultInstance();
+    return com.aves.flamingodb.proto.NoDocument.getDefaultInstance();
   }
   /**
    * <pre>
@@ -97,7 +97,7 @@ public  final class MaybeDocument extends
    *
    * <code>.firestore.client.NoDocument no_document = 1;</code>
    */
-  private void setNoDocument(com.google.firebase.firestore.proto.NoDocument value) {
+  private void setNoDocument(com.aves.flamingodb.proto.NoDocument value) {
     value.getClass();
   documentType_ = value;
     documentTypeCase_ = 1;
@@ -109,11 +109,11 @@ public  final class MaybeDocument extends
    *
    * <code>.firestore.client.NoDocument no_document = 1;</code>
    */
-  private void mergeNoDocument(com.google.firebase.firestore.proto.NoDocument value) {
+  private void mergeNoDocument(com.aves.flamingodb.proto.NoDocument value) {
     value.getClass();
   if (documentTypeCase_ == 1 &&
-        documentType_ != com.google.firebase.firestore.proto.NoDocument.getDefaultInstance()) {
-      documentType_ = com.google.firebase.firestore.proto.NoDocument.newBuilder((com.google.firebase.firestore.proto.NoDocument) documentType_)
+        documentType_ != com.aves.flamingodb.proto.NoDocument.getDefaultInstance()) {
+      documentType_ = com.aves.flamingodb.proto.NoDocument.newBuilder((com.aves.flamingodb.proto.NoDocument) documentType_)
           .mergeFrom(value).buildPartial();
     } else {
       documentType_ = value;
@@ -224,11 +224,11 @@ public  final class MaybeDocument extends
    * <code>.firestore.client.UnknownDocument unknown_document = 3;</code>
    */
   @Override
-  public com.google.firebase.firestore.proto.UnknownDocument getUnknownDocument() {
+  public com.aves.flamingodb.proto.UnknownDocument getUnknownDocument() {
     if (documentTypeCase_ == 3) {
-       return (com.google.firebase.firestore.proto.UnknownDocument) documentType_;
+       return (com.aves.flamingodb.proto.UnknownDocument) documentType_;
     }
-    return com.google.firebase.firestore.proto.UnknownDocument.getDefaultInstance();
+    return com.aves.flamingodb.proto.UnknownDocument.getDefaultInstance();
   }
   /**
    * <pre>
@@ -237,7 +237,7 @@ public  final class MaybeDocument extends
    *
    * <code>.firestore.client.UnknownDocument unknown_document = 3;</code>
    */
-  private void setUnknownDocument(com.google.firebase.firestore.proto.UnknownDocument value) {
+  private void setUnknownDocument(com.aves.flamingodb.proto.UnknownDocument value) {
     value.getClass();
   documentType_ = value;
     documentTypeCase_ = 3;
@@ -249,11 +249,11 @@ public  final class MaybeDocument extends
    *
    * <code>.firestore.client.UnknownDocument unknown_document = 3;</code>
    */
-  private void mergeUnknownDocument(com.google.firebase.firestore.proto.UnknownDocument value) {
+  private void mergeUnknownDocument(com.aves.flamingodb.proto.UnknownDocument value) {
     value.getClass();
   if (documentTypeCase_ == 3 &&
-        documentType_ != com.google.firebase.firestore.proto.UnknownDocument.getDefaultInstance()) {
-      documentType_ = com.google.firebase.firestore.proto.UnknownDocument.newBuilder((com.google.firebase.firestore.proto.UnknownDocument) documentType_)
+        documentType_ != com.aves.flamingodb.proto.UnknownDocument.getDefaultInstance()) {
+      documentType_ = com.aves.flamingodb.proto.UnknownDocument.newBuilder((com.aves.flamingodb.proto.UnknownDocument) documentType_)
           .mergeFrom(value).buildPartial();
     } else {
       documentType_ = value;
@@ -321,73 +321,73 @@ public  final class MaybeDocument extends
     hasCommittedMutations_ = false;
   }
 
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(byte[] data)
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(java.io.InputStream input)
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseDelimitedFrom(java.io.InputStream input)
+  public static com.aves.flamingodb.proto.MaybeDocument parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return parseDelimitedFrom(DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseDelimitedFrom(
+  public static com.aves.flamingodb.proto.MaybeDocument parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.MaybeDocument parseFrom(
+  public static com.aves.flamingodb.proto.MaybeDocument parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -398,7 +398,7 @@ public  final class MaybeDocument extends
   public static Builder newBuilder() {
     return (Builder) DEFAULT_INSTANCE.createBuilder();
   }
-  public static Builder newBuilder(com.google.firebase.firestore.proto.MaybeDocument prototype) {
+  public static Builder newBuilder(com.aves.flamingodb.proto.MaybeDocument prototype) {
     return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
   }
 
@@ -413,10 +413,10 @@ public  final class MaybeDocument extends
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageLite.Builder<
-        com.google.firebase.firestore.proto.MaybeDocument, Builder> implements
+        com.aves.flamingodb.proto.MaybeDocument, Builder> implements
       // @@protoc_insertion_point(builder_implements:firestore.client.MaybeDocument)
-      com.google.firebase.firestore.proto.MaybeDocumentOrBuilder {
-    // Construct using com.google.firebase.firestore.proto.MaybeDocument.newBuilder()
+      com.aves.flamingodb.proto.MaybeDocumentOrBuilder {
+    // Construct using com.aves.flamingodb.proto.MaybeDocument.newBuilder()
     private Builder() {
       super(DEFAULT_INSTANCE);
     }
@@ -453,7 +453,7 @@ public  final class MaybeDocument extends
      * <code>.firestore.client.NoDocument no_document = 1;</code>
      */
     @Override
-    public com.google.firebase.firestore.proto.NoDocument getNoDocument() {
+    public com.aves.flamingodb.proto.NoDocument getNoDocument() {
       return instance.getNoDocument();
     }
     /**
@@ -463,7 +463,7 @@ public  final class MaybeDocument extends
      *
      * <code>.firestore.client.NoDocument no_document = 1;</code>
      */
-    public Builder setNoDocument(com.google.firebase.firestore.proto.NoDocument value) {
+    public Builder setNoDocument(com.aves.flamingodb.proto.NoDocument value) {
       copyOnWrite();
       instance.setNoDocument(value);
       return this;
@@ -476,7 +476,7 @@ public  final class MaybeDocument extends
      * <code>.firestore.client.NoDocument no_document = 1;</code>
      */
     public Builder setNoDocument(
-        com.google.firebase.firestore.proto.NoDocument.Builder builderForValue) {
+        com.aves.flamingodb.proto.NoDocument.Builder builderForValue) {
       copyOnWrite();
       instance.setNoDocument(builderForValue.build());
       return this;
@@ -488,7 +488,7 @@ public  final class MaybeDocument extends
      *
      * <code>.firestore.client.NoDocument no_document = 1;</code>
      */
-    public Builder mergeNoDocument(com.google.firebase.firestore.proto.NoDocument value) {
+    public Builder mergeNoDocument(com.aves.flamingodb.proto.NoDocument value) {
       copyOnWrite();
       instance.mergeNoDocument(value);
       return this;
@@ -597,7 +597,7 @@ public  final class MaybeDocument extends
      * <code>.firestore.client.UnknownDocument unknown_document = 3;</code>
      */
     @Override
-    public com.google.firebase.firestore.proto.UnknownDocument getUnknownDocument() {
+    public com.aves.flamingodb.proto.UnknownDocument getUnknownDocument() {
       return instance.getUnknownDocument();
     }
     /**
@@ -607,7 +607,7 @@ public  final class MaybeDocument extends
      *
      * <code>.firestore.client.UnknownDocument unknown_document = 3;</code>
      */
-    public Builder setUnknownDocument(com.google.firebase.firestore.proto.UnknownDocument value) {
+    public Builder setUnknownDocument(com.aves.flamingodb.proto.UnknownDocument value) {
       copyOnWrite();
       instance.setUnknownDocument(value);
       return this;
@@ -620,7 +620,7 @@ public  final class MaybeDocument extends
      * <code>.firestore.client.UnknownDocument unknown_document = 3;</code>
      */
     public Builder setUnknownDocument(
-        com.google.firebase.firestore.proto.UnknownDocument.Builder builderForValue) {
+        com.aves.flamingodb.proto.UnknownDocument.Builder builderForValue) {
       copyOnWrite();
       instance.setUnknownDocument(builderForValue.build());
       return this;
@@ -632,7 +632,7 @@ public  final class MaybeDocument extends
      *
      * <code>.firestore.client.UnknownDocument unknown_document = 3;</code>
      */
-    public Builder mergeUnknownDocument(com.google.firebase.firestore.proto.UnknownDocument value) {
+    public Builder mergeUnknownDocument(com.aves.flamingodb.proto.UnknownDocument value) {
       copyOnWrite();
       instance.mergeUnknownDocument(value);
       return this;
@@ -708,7 +708,7 @@ public  final class MaybeDocument extends
       Object arg0, Object arg1) {
     switch (method) {
       case NEW_MUTABLE_INSTANCE: {
-        return new com.google.firebase.firestore.proto.MaybeDocument();
+        return new com.aves.flamingodb.proto.MaybeDocument();
       }
       case NEW_BUILDER: {
         return new Builder();
@@ -717,9 +717,9 @@ public  final class MaybeDocument extends
           Object[] objects = new Object[] {
             "documentType_",
             "documentTypeCase_",
-            com.google.firebase.firestore.proto.NoDocument.class,
+            com.aves.flamingodb.proto.NoDocument.class,
             com.google.firestore.v1.Document.class,
-            com.google.firebase.firestore.proto.UnknownDocument.class,
+            com.aves.flamingodb.proto.UnknownDocument.class,
             "hasCommittedMutations_",
           };
           String info =
@@ -732,13 +732,13 @@ public  final class MaybeDocument extends
         return DEFAULT_INSTANCE;
       }
       case GET_PARSER: {
-        com.google.protobuf.Parser<com.google.firebase.firestore.proto.MaybeDocument> parser = PARSER;
+        com.google.protobuf.Parser<com.aves.flamingodb.proto.MaybeDocument> parser = PARSER;
         if (parser == null) {
-          synchronized (com.google.firebase.firestore.proto.MaybeDocument.class) {
+          synchronized (com.aves.flamingodb.proto.MaybeDocument.class) {
             parser = PARSER;
             if (parser == null) {
               parser =
-                  new DefaultInstanceBasedParser<com.google.firebase.firestore.proto.MaybeDocument>(
+                  new DefaultInstanceBasedParser<com.aves.flamingodb.proto.MaybeDocument>(
                       DEFAULT_INSTANCE);
               PARSER = parser;
             }
@@ -758,7 +758,7 @@ public  final class MaybeDocument extends
 
 
   // @@protoc_insertion_point(class_scope:firestore.client.MaybeDocument)
-  private static final com.google.firebase.firestore.proto.MaybeDocument DEFAULT_INSTANCE;
+  private static final com.aves.flamingodb.proto.MaybeDocument DEFAULT_INSTANCE;
   static {
     MaybeDocument defaultInstance = new MaybeDocument();
     // New instances are implicitly immutable so no need to make
@@ -768,7 +768,7 @@ public  final class MaybeDocument extends
       MaybeDocument.class, defaultInstance);
   }
 
-  public static com.google.firebase.firestore.proto.MaybeDocument getDefaultInstance() {
+  public static com.aves.flamingodb.proto.MaybeDocument getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 

@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.model.mutation;
 
-import com.google.firebase.firestore.model.FieldPath;
+import com.aves.flamingodb.model.FieldPath;
 
 /** A field path and the operation to perform upon it. */
 public final class FieldTransform {

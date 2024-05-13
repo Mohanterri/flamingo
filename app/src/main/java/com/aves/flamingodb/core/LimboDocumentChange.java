@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.core;
 
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.model.DocumentKey;
 
 /** change to a particular document wrt to whether it is in "limbo". */
 public class LimboDocumentChange {

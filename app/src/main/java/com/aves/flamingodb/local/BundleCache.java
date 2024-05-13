@@ -15,8 +15,8 @@
 package com.aves.flamingodb.local;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.bundle.BundleMetadata;
-import com.google.firebase.firestore.bundle.NamedQuery;
+import com.aves.flamingodb.bundle.BundleMetadata;
+import com.aves.flamingodb.bundle.NamedQuery;
 
 /** Provides methods to save and read Firestore bundles. */
 public interface BundleCache {

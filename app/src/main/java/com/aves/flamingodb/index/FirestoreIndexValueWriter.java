@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.index;
 
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.model.Values;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.model.Values;
 import com.google.firestore.v1.ArrayValue;
 import com.google.firestore.v1.MapValue;
 import com.google.firestore.v1.Value;

@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.bundle;
 
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.MutableDocument;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.MutableDocument;
 
 /** A document that was saved to a bundle. */
 public class BundleDocument implements BundleElement {

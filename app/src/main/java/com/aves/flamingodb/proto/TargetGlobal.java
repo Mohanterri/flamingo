@@ -239,73 +239,73 @@ public  final class TargetGlobal extends
     targetCount_ = 0;
   }
 
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(byte[] data)
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(java.io.InputStream input)
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseDelimitedFrom(java.io.InputStream input)
+  public static com.aves.flamingodb.proto.TargetGlobal parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return parseDelimitedFrom(DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseDelimitedFrom(
+  public static com.aves.flamingodb.proto.TargetGlobal parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.TargetGlobal parseFrom(
+  public static com.aves.flamingodb.proto.TargetGlobal parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -316,7 +316,7 @@ public  final class TargetGlobal extends
   public static Builder newBuilder() {
     return (Builder) DEFAULT_INSTANCE.createBuilder();
   }
-  public static Builder newBuilder(com.google.firebase.firestore.proto.TargetGlobal prototype) {
+  public static Builder newBuilder(com.aves.flamingodb.proto.TargetGlobal prototype) {
     return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
   }
 
@@ -330,10 +330,10 @@ public  final class TargetGlobal extends
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageLite.Builder<
-        com.google.firebase.firestore.proto.TargetGlobal, Builder> implements
+        com.aves.flamingodb.proto.TargetGlobal, Builder> implements
       // @@protoc_insertion_point(builder_implements:firestore.client.TargetGlobal)
-      com.google.firebase.firestore.proto.TargetGlobalOrBuilder {
-    // Construct using com.google.firebase.firestore.proto.TargetGlobal.newBuilder()
+      com.aves.flamingodb.proto.TargetGlobalOrBuilder {
+    // Construct using com.aves.flamingodb.proto.TargetGlobal.newBuilder()
     private Builder() {
       super(DEFAULT_INSTANCE);
     }
@@ -587,7 +587,7 @@ public  final class TargetGlobal extends
       Object arg0, Object arg1) {
     switch (method) {
       case NEW_MUTABLE_INSTANCE: {
-        return new com.google.firebase.firestore.proto.TargetGlobal();
+        return new com.aves.flamingodb.proto.TargetGlobal();
       }
       case NEW_BUILDER: {
         return new Builder();
@@ -609,13 +609,13 @@ public  final class TargetGlobal extends
         return DEFAULT_INSTANCE;
       }
       case GET_PARSER: {
-        com.google.protobuf.Parser<com.google.firebase.firestore.proto.TargetGlobal> parser = PARSER;
+        com.google.protobuf.Parser<com.aves.flamingodb.proto.TargetGlobal> parser = PARSER;
         if (parser == null) {
-          synchronized (com.google.firebase.firestore.proto.TargetGlobal.class) {
+          synchronized (com.aves.flamingodb.proto.TargetGlobal.class) {
             parser = PARSER;
             if (parser == null) {
               parser =
-                  new DefaultInstanceBasedParser<com.google.firebase.firestore.proto.TargetGlobal>(
+                  new DefaultInstanceBasedParser<com.aves.flamingodb.proto.TargetGlobal>(
                       DEFAULT_INSTANCE);
               PARSER = parser;
             }
@@ -635,7 +635,7 @@ public  final class TargetGlobal extends
 
 
   // @@protoc_insertion_point(class_scope:firestore.client.TargetGlobal)
-  private static final com.google.firebase.firestore.proto.TargetGlobal DEFAULT_INSTANCE;
+  private static final com.aves.flamingodb.proto.TargetGlobal DEFAULT_INSTANCE;
   static {
     TargetGlobal defaultInstance = new TargetGlobal();
     // New instances are implicitly immutable so no need to make
@@ -645,7 +645,7 @@ public  final class TargetGlobal extends
       TargetGlobal.class, defaultInstance);
   }
 
-  public static com.google.firebase.firestore.proto.TargetGlobal getDefaultInstance() {
+  public static com.aves.flamingodb.proto.TargetGlobal getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 

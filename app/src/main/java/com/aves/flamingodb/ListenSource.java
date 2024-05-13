@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb;
 
-import com.google.firebase.firestore.Query;
+import com.aves.flamingodb.Query;
 
 /**
  * Configures the source option of {@code addSnapshotListener()} calls on {@link DocumentReference}

@@ -15,9 +15,9 @@
 package com.aves.flamingodb.local;
 
 import com.google.firebase.database.collection.ImmutableSortedSet;
-import com.google.firebase.firestore.core.DocumentViewChange;
-import com.google.firebase.firestore.core.ViewSnapshot;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.core.DocumentViewChange;
+import com.aves.flamingodb.core.ViewSnapshot;
+import com.aves.flamingodb.model.DocumentKey;
 import java.util.ArrayList;
 
 /**

@@ -16,7 +16,7 @@ package com.aves.flamingodb.model;
 
 import androidx.annotation.Nullable;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.DocumentSnapshot;
+import com.aves.flamingodb.DocumentSnapshot;
 import com.google.firestore.v1.MapValue;
 import com.google.firestore.v1.Value;
 

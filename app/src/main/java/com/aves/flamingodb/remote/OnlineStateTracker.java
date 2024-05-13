@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
-import com.google.firebase.firestore.core.OnlineState;
-import com.google.firebase.firestore.util.AsyncQueue;
-import com.google.firebase.firestore.util.AsyncQueue.DelayedTask;
-import com.google.firebase.firestore.util.AsyncQueue.TimerId;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.core.OnlineState;
+import com.aves.flamingodb.util.AsyncQueue;
+import com.aves.flamingodb.util.AsyncQueue.DelayedTask;
+import com.aves.flamingodb.util.AsyncQueue.TimerId;
+import com.aves.flamingodb.util.Logger;
 import io.grpc.Status;
 import java.util.Locale;
 

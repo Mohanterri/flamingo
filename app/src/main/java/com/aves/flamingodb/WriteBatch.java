@@ -14,18 +14,18 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
-import com.google.firebase.firestore.core.UserData.ParsedSetData;
-import com.google.firebase.firestore.core.UserData.ParsedUpdateData;
-import com.google.firebase.firestore.model.mutation.DeleteMutation;
-import com.google.firebase.firestore.model.mutation.Mutation;
-import com.google.firebase.firestore.model.mutation.Precondition;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.core.UserData.ParsedSetData;
+import com.aves.flamingodb.core.UserData.ParsedUpdateData;
+import com.aves.flamingodb.model.mutation.DeleteMutation;
+import com.aves.flamingodb.model.mutation.Mutation;
+import com.aves.flamingodb.model.mutation.Precondition;
+import com.aves.flamingodb.util.Util;
 import java.util.ArrayList;
 import java.util.Map;
 

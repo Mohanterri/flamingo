@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import android.util.SparseArray;
-import com.google.firebase.firestore.core.ListenSequence;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.util.Consumer;
+import com.aves.flamingodb.core.ListenSequence;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.util.Consumer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

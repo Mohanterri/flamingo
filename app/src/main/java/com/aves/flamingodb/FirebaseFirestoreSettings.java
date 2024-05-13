@@ -14,15 +14,15 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.NonNull;
 
-import com.google.firebase.firestore.LocalCacheSettings;
-import com.google.firebase.firestore.MemoryCacheSettings;
-import com.google.firebase.firestore.MemoryLruGcSettings;
-import com.google.firebase.firestore.PersistentCacheSettings;
+import com.aves.flamingodb.LocalCacheSettings;
+import com.aves.flamingodb.MemoryCacheSettings;
+import com.aves.flamingodb.MemoryLruGcSettings;
+import com.aves.flamingodb.PersistentCacheSettings;
 
 import java.util.Objects;
 import javax.annotation.Nullable;

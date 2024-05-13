@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb.model;
 
-import static com.google.firebase.firestore.model.ServerTimestamps.getLocalWriteTime;
-import static com.google.firebase.firestore.model.ServerTimestamps.isServerTimestamp;
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.model.ServerTimestamps.getLocalWriteTime;
+import static com.aves.flamingodb.model.ServerTimestamps.isServerTimestamp;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.util.Util;
 import com.google.firestore.v1.ArrayValue;
 import com.google.firestore.v1.ArrayValueOrBuilder;
 import com.google.firestore.v1.MapValue;

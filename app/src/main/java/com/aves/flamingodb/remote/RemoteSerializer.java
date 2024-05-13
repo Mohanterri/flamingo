@@ -14,46 +14,46 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.AggregateField;
-import com.google.firebase.firestore.core.Bound;
-import com.google.firebase.firestore.core.FieldFilter;
-import com.google.firebase.firestore.core.Filter;
-import com.google.firebase.firestore.core.OrderBy;
-import com.google.firebase.firestore.core.OrderBy.Direction;
-import com.google.firebase.firestore.core.Query;
-import com.google.firebase.firestore.local.QueryPurpose;
-import com.google.firebase.firestore.local.TargetData;
-import com.google.firebase.firestore.model.DatabaseId;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldPath;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.ObjectValue;
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.model.Values;
-import com.google.firebase.firestore.model.mutation.ArrayTransformOperation;
-import com.google.firebase.firestore.model.mutation.DeleteMutation;
-import com.google.firebase.firestore.model.mutation.FieldMask;
-import com.google.firebase.firestore.model.mutation.FieldTransform;
-import com.google.firebase.firestore.model.mutation.Mutation;
-import com.google.firebase.firestore.model.mutation.MutationResult;
-import com.google.firebase.firestore.model.mutation.NumericIncrementTransformOperation;
-import com.google.firebase.firestore.model.mutation.PatchMutation;
-import com.google.firebase.firestore.model.mutation.Precondition;
-import com.google.firebase.firestore.model.mutation.ServerTimestampOperation;
-import com.google.firebase.firestore.model.mutation.SetMutation;
-import com.google.firebase.firestore.model.mutation.TransformOperation;
-import com.google.firebase.firestore.model.mutation.VerifyMutation;
-import com.google.firebase.firestore.remote.WatchChange.ExistenceFilterWatchChange;
-import com.google.firebase.firestore.remote.WatchChange.WatchTargetChange;
-import com.google.firebase.firestore.remote.WatchChange.WatchTargetChangeType;
-import com.google.firebase.firestore.util.Assert;
+import com.aves.flamingodb.AggregateField;
+import com.aves.flamingodb.core.Bound;
+import com.aves.flamingodb.core.FieldFilter;
+import com.aves.flamingodb.core.Filter;
+import com.aves.flamingodb.core.OrderBy;
+import com.aves.flamingodb.core.OrderBy.Direction;
+import com.aves.flamingodb.core.Query;
+import com.aves.flamingodb.local.QueryPurpose;
+import com.aves.flamingodb.local.TargetData;
+import com.aves.flamingodb.model.DatabaseId;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldPath;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.ObjectValue;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.model.Values;
+import com.aves.flamingodb.model.mutation.ArrayTransformOperation;
+import com.aves.flamingodb.model.mutation.DeleteMutation;
+import com.aves.flamingodb.model.mutation.FieldMask;
+import com.aves.flamingodb.model.mutation.FieldTransform;
+import com.aves.flamingodb.model.mutation.Mutation;
+import com.aves.flamingodb.model.mutation.MutationResult;
+import com.aves.flamingodb.model.mutation.NumericIncrementTransformOperation;
+import com.aves.flamingodb.model.mutation.PatchMutation;
+import com.aves.flamingodb.model.mutation.Precondition;
+import com.aves.flamingodb.model.mutation.ServerTimestampOperation;
+import com.aves.flamingodb.model.mutation.SetMutation;
+import com.aves.flamingodb.model.mutation.TransformOperation;
+import com.aves.flamingodb.model.mutation.VerifyMutation;
+import com.aves.flamingodb.remote.WatchChange.ExistenceFilterWatchChange;
+import com.aves.flamingodb.remote.WatchChange.WatchTargetChange;
+import com.aves.flamingodb.remote.WatchChange.WatchTargetChangeType;
+import com.aves.flamingodb.util.Assert;
 import com.google.firestore.v1.ArrayValue;
 import com.google.firestore.v1.BatchGetDocumentsResponse;
 import com.google.firestore.v1.BatchGetDocumentsResponse.ResultCase;
@@ -484,7 +484,7 @@ public final class RemoteSerializer {
 
   public Target encodeTarget(TargetData targetData) {
     Target.Builder builder = Target.newBuilder();
-    com.google.firebase.firestore.core.Target target = targetData.getTarget();
+    com.aves.flamingodb.core.Target target = targetData.getTarget();
 
     if (target.isDocumentQuery()) {
       builder.setDocuments(encodeDocumentsTarget(target));
@@ -512,13 +512,13 @@ public final class RemoteSerializer {
     return builder.build();
   }
 
-  public DocumentsTarget encodeDocumentsTarget(com.google.firebase.firestore.core.Target target) {
+  public DocumentsTarget encodeDocumentsTarget(com.aves.flamingodb.core.Target target) {
     DocumentsTarget.Builder builder = DocumentsTarget.newBuilder();
     builder.addDocuments(encodeQueryPath(target.getPath()));
     return builder.build();
   }
 
-  public com.google.firebase.firestore.core.Target decodeDocumentsTarget(DocumentsTarget target) {
+  public com.aves.flamingodb.core.Target decodeDocumentsTarget(DocumentsTarget target) {
     int count = target.getDocumentsCount();
     hardAssert(count == 1, "DocumentsTarget contained other than 1 document %d", count);
 
@@ -526,7 +526,7 @@ public final class RemoteSerializer {
     return Query.atPath(decodeQueryPath(name)).toTarget();
   }
 
-  public QueryTarget encodeQueryTarget(com.google.firebase.firestore.core.Target target) {
+  public QueryTarget encodeQueryTarget(com.aves.flamingodb.core.Target target) {
     // Dissect the path into parent, collectionId, and optional key filter.
     QueryTarget.Builder builder = QueryTarget.newBuilder();
     StructuredQuery.Builder structuredQueryBuilder = StructuredQuery.newBuilder();
@@ -581,7 +581,7 @@ public final class RemoteSerializer {
     return builder.build();
   }
 
-  public com.google.firebase.firestore.core.Target decodeQueryTarget(
+  public com.aves.flamingodb.core.Target decodeQueryTarget(
       String parent, StructuredQuery query) {
     ResourcePath path = decodeQueryPath(parent);
 
@@ -617,7 +617,7 @@ public final class RemoteSerializer {
       orderBy = Collections.emptyList();
     }
 
-    long limit = com.google.firebase.firestore.core.Target.NO_LIMIT;
+    long limit = com.aves.flamingodb.core.Target.NO_LIMIT;
     if (query.hasLimit()) {
       limit = query.getLimit().getValue();
     }
@@ -632,11 +632,11 @@ public final class RemoteSerializer {
       endAt = new Bound(query.getEndAt().getValuesList(), !query.getEndAt().getBefore());
     }
 
-    return new com.google.firebase.firestore.core.Target(
+    return new com.aves.flamingodb.core.Target(
         path, collectionGroup, filterBy, orderBy, limit, startAt, endAt);
   }
 
-  public com.google.firebase.firestore.core.Target decodeQueryTarget(QueryTarget target) {
+  public com.aves.flamingodb.core.Target decodeQueryTarget(QueryTarget target) {
     return decodeQueryTarget(target.getParent(), target.getStructuredQuery());
   }
 
@@ -693,8 +693,8 @@ public final class RemoteSerializer {
   private StructuredQuery.Filter encodeFilters(List<Filter> filters) {
     // A target's filter list is implicitly a composite AND filter.
     return encodeFilter(
-        new com.google.firebase.firestore.core.CompositeFilter(
-            filters, com.google.firebase.firestore.core.CompositeFilter.Operator.AND));
+        new com.aves.flamingodb.core.CompositeFilter(
+            filters, com.aves.flamingodb.core.CompositeFilter.Operator.AND));
   }
 
   private List<Filter> decodeFilters(StructuredQuery.Filter proto) {
@@ -702,9 +702,9 @@ public final class RemoteSerializer {
 
     // Instead of a singletonList containing AND(F1, F2, ...), we can return a list containing F1,
     // F2, ... to stay consistent with the older SDK versions.
-    if (result instanceof com.google.firebase.firestore.core.CompositeFilter) {
-      com.google.firebase.firestore.core.CompositeFilter compositeFilter =
-          (com.google.firebase.firestore.core.CompositeFilter) result;
+    if (result instanceof com.aves.flamingodb.core.CompositeFilter) {
+      com.aves.flamingodb.core.CompositeFilter compositeFilter =
+          (com.aves.flamingodb.core.CompositeFilter) result;
       if (compositeFilter.isFlatConjunction()) {
         return compositeFilter.getFilters();
       }
@@ -714,11 +714,11 @@ public final class RemoteSerializer {
   }
 
   @VisibleForTesting
-  StructuredQuery.Filter encodeFilter(com.google.firebase.firestore.core.Filter filter) {
+  StructuredQuery.Filter encodeFilter(com.aves.flamingodb.core.Filter filter) {
     if (filter instanceof FieldFilter) {
       return encodeUnaryOrFieldFilter((FieldFilter) filter);
-    } else if (filter instanceof com.google.firebase.firestore.core.CompositeFilter) {
-      return encodeCompositeFilter((com.google.firebase.firestore.core.CompositeFilter) filter);
+    } else if (filter instanceof com.aves.flamingodb.core.CompositeFilter) {
+      return encodeCompositeFilter((com.aves.flamingodb.core.CompositeFilter) filter);
     } else {
       throw fail("Unrecognized filter type %s", filter.toString());
     }
@@ -752,7 +752,7 @@ public final class RemoteSerializer {
   }
 
   StructuredQuery.CompositeFilter.Operator encodeCompositeFilterOperator(
-      com.google.firebase.firestore.core.CompositeFilter.Operator op) {
+      com.aves.flamingodb.core.CompositeFilter.Operator op) {
     switch (op) {
       case AND:
         return StructuredQuery.CompositeFilter.Operator.AND;
@@ -763,13 +763,13 @@ public final class RemoteSerializer {
     }
   }
 
-  com.google.firebase.firestore.core.CompositeFilter.Operator decodeCompositeFilterOperator(
+  com.aves.flamingodb.core.CompositeFilter.Operator decodeCompositeFilterOperator(
       StructuredQuery.CompositeFilter.Operator op) {
     switch (op) {
       case AND:
-        return com.google.firebase.firestore.core.CompositeFilter.Operator.AND;
+        return com.aves.flamingodb.core.CompositeFilter.Operator.AND;
       case OR:
-        return com.google.firebase.firestore.core.CompositeFilter.Operator.OR;
+        return com.aves.flamingodb.core.CompositeFilter.Operator.OR;
       default:
         throw fail("Only AND and OR composite filter types are supported.");
     }
@@ -777,7 +777,7 @@ public final class RemoteSerializer {
 
   @VisibleForTesting
   StructuredQuery.Filter encodeCompositeFilter(
-      com.google.firebase.firestore.core.CompositeFilter compositeFilter) {
+      com.aves.flamingodb.core.CompositeFilter compositeFilter) {
     List<StructuredQuery.Filter> protos = new ArrayList<>(compositeFilter.getFilters().size());
     for (Filter filter : compositeFilter.getFilters()) {
       protos.add(encodeFilter(filter));
@@ -832,13 +832,13 @@ public final class RemoteSerializer {
   }
 
   @VisibleForTesting
-  com.google.firebase.firestore.core.CompositeFilter decodeCompositeFilter(
+  com.aves.flamingodb.core.CompositeFilter decodeCompositeFilter(
       StructuredQuery.CompositeFilter compositeFilter) {
     List<Filter> filters = new ArrayList<>();
     for (StructuredQuery.Filter filter : compositeFilter.getFiltersList()) {
       filters.add(decodeFilter(filter));
     }
-    return new com.google.firebase.firestore.core.CompositeFilter(
+    return new com.aves.flamingodb.core.CompositeFilter(
         filters, decodeCompositeFilterOperator(compositeFilter.getOp()));
   }
 

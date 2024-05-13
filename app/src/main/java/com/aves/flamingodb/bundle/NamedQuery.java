@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.bundle;
 
-import com.google.firebase.firestore.model.SnapshotVersion;
+import com.aves.flamingodb.model.SnapshotVersion;
 
 /** Represents a named query saved by the SDK in its local storage. */
 public class NamedQuery implements BundleElement {

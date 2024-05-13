@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.bundle;
 
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.SnapshotVersion;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.SnapshotVersion;
 import java.util.List;
 
 // TODO(bundles): Figure out whether we need this class (it is not needed in Web).

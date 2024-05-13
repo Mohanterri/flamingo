@@ -17,14 +17,14 @@ package com.aves.flamingodb.core;
 import androidx.annotation.NonNull;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.TransactionOptions;
-import com.google.firebase.firestore.remote.Datastore;
-import com.google.firebase.firestore.remote.RemoteStore;
-import com.google.firebase.firestore.util.AsyncQueue;
-import com.google.firebase.firestore.util.AsyncQueue.TimerId;
-import com.google.firebase.firestore.util.ExponentialBackoff;
-import com.google.firebase.firestore.util.Function;
+import com.aves.flamingodb.FirebaseFirestoreException;
+import com.aves.flamingodb.TransactionOptions;
+import com.aves.flamingodb.remote.Datastore;
+import com.aves.flamingodb.remote.RemoteStore;
+import com.aves.flamingodb.util.AsyncQueue;
+import com.aves.flamingodb.util.AsyncQueue.TimerId;
+import com.aves.flamingodb.util.ExponentialBackoff;
+import com.aves.flamingodb.util.Function;
 
 /** TransactionRunner encapsulates the logic needed to run and retry transactions with backoff. */
 public class TransactionRunner<TResult> {

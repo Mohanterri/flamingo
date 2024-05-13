@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.core;
 
-import com.google.firebase.firestore.model.Document;
+import com.aves.flamingodb.model.Document;
 import java.util.List;
 
 public abstract class Filter {

@@ -14,14 +14,14 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.google.firebase.firestore.SnapshotMetadata;
-import com.google.firebase.firestore.core.ViewSnapshot;
-import com.google.firebase.firestore.model.Document;
+import com.aves.flamingodb.SnapshotMetadata;
+import com.aves.flamingodb.core.ViewSnapshot;
+import com.aves.flamingodb.model.Document;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;

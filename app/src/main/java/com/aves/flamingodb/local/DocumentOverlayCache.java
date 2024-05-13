@@ -15,10 +15,10 @@
 package com.aves.flamingodb.local;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.model.mutation.Mutation;
-import com.google.firebase.firestore.model.mutation.Overlay;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.model.mutation.Mutation;
+import com.aves.flamingodb.model.mutation.Overlay;
 import java.util.Map;
 import java.util.SortedSet;
 

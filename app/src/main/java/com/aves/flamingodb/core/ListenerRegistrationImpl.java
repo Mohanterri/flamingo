@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.core;
 
-import com.google.firebase.firestore.ListenerRegistration;
+import com.aves.flamingodb.ListenerRegistration;
 
 /** Implements the ListenerRegistration interface by removing a query from the listener. */
 public class ListenerRegistrationImpl implements ListenerRegistration {

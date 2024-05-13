@@ -14,14 +14,14 @@
 
 package com.aves.flamingodb.core;
 
-import com.google.firebase.firestore.local.IndexBackfiller;
-import com.google.firebase.firestore.local.LocalSerializer;
-import com.google.firebase.firestore.local.LruDelegate;
-import com.google.firebase.firestore.local.LruGarbageCollector;
-import com.google.firebase.firestore.local.Persistence;
-import com.google.firebase.firestore.local.SQLitePersistence;
-import com.google.firebase.firestore.local.Scheduler;
-import com.google.firebase.firestore.remote.RemoteSerializer;
+import com.aves.flamingodb.local.IndexBackfiller;
+import com.aves.flamingodb.local.LocalSerializer;
+import com.aves.flamingodb.local.LruDelegate;
+import com.aves.flamingodb.local.LruGarbageCollector;
+import com.aves.flamingodb.local.Persistence;
+import com.aves.flamingodb.local.SQLitePersistence;
+import com.aves.flamingodb.local.Scheduler;
+import com.aves.flamingodb.remote.RemoteSerializer;
 
 /** Provides all components needed for Firestore with SQLite persistence. */
 public class SQLiteComponentProvider extends MemoryComponentProvider {

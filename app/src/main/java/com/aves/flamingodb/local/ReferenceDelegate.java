@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.local;
 
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.model.DocumentKey;
 
 /**
  * A ReferenceDelegate instance handles all of the hooks into the document-reference lifecycle. This

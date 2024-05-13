@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.util.Assert;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.util.Assert;
 import java.util.Map;
 
 /**

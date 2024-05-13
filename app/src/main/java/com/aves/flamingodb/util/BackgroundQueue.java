@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.util;
 
-import static com.google.firebase.firestore.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.fail;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Semaphore;

@@ -14,9 +14,9 @@
 
 package com.aves.flamingodb.core;
 
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.FieldPath;
-import com.google.firebase.firestore.model.Values;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.FieldPath;
+import com.aves.flamingodb.model.Values;
 import com.google.firestore.v1.Value;
 
 /** A Filter that implements the array-contains operator. */

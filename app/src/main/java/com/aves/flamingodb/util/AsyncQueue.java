@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.util;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import android.annotation.SuppressLint;
 import android.os.Handler;
@@ -25,7 +25,7 @@ import androidx.annotation.VisibleForTesting;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
-import com.google.firebase.firestore.BuildConfig;
+import com.aves.flamingodb.BuildConfig;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.Callable;

@@ -16,8 +16,8 @@ package com.aves.flamingodb.local;
 
 import com.google.firebase.database.collection.ImmutableSortedMap;
 import com.google.firebase.database.collection.ImmutableSortedSet;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
 
 /** The result of executing a query against the local store. */
 public class QueryResult {

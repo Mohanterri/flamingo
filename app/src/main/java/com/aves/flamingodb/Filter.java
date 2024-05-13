@@ -16,7 +16,7 @@ package com.aves.flamingodb;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.core.FieldFilter.Operator;
+import com.aves.flamingodb.core.FieldFilter.Operator;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -73,11 +73,11 @@ public class Filter {
 
   static class CompositeFilter extends Filter {
     private final List<Filter> filters;
-    private final com.google.firebase.firestore.core.CompositeFilter.Operator operator;
+    private final com.aves.flamingodb.core.CompositeFilter.Operator operator;
 
     public CompositeFilter(
         @NonNull List<Filter> filters,
-        com.google.firebase.firestore.core.CompositeFilter.Operator operator) {
+        com.aves.flamingodb.core.CompositeFilter.Operator operator) {
       this.filters = filters;
       this.operator = operator;
     }
@@ -86,7 +86,7 @@ public class Filter {
       return filters;
     }
 
-    public com.google.firebase.firestore.core.CompositeFilter.Operator getOperator() {
+    public com.aves.flamingodb.core.CompositeFilter.Operator getOperator() {
       return operator;
     }
 
@@ -366,7 +366,7 @@ public class Filter {
   @NonNull
   public static Filter or(Filter... filters) {
     return new CompositeFilter(
-        Arrays.asList(filters), com.google.firebase.firestore.core.CompositeFilter.Operator.OR);
+        Arrays.asList(filters), com.aves.flamingodb.core.CompositeFilter.Operator.OR);
   }
 
   /**
@@ -379,6 +379,6 @@ public class Filter {
   @NonNull
   public static Filter and(Filter... filters) {
     return new CompositeFilter(
-        Arrays.asList(filters), com.google.firebase.firestore.core.CompositeFilter.Operator.AND);
+        Arrays.asList(filters), com.aves.flamingodb.core.CompositeFilter.Operator.AND);
   }
 }

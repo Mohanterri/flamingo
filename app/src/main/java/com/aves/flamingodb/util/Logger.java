@@ -15,7 +15,7 @@
 package com.aves.flamingodb.util;
 
 import android.util.Log;
-import com.google.firebase.firestore.BuildConfig;
+import com.aves.flamingodb.BuildConfig;
 
 /** Helper class to log messages for Firestore */
 public class Logger {

@@ -14,10 +14,10 @@
 
 package com.aves.flamingodb.model;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.NonNull;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.util.Util;
 import java.util.ArrayList;
 import java.util.List;
 

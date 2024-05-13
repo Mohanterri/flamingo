@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb;
 
-import com.google.firebase.firestore.MemoryCacheSettings;
-import com.google.firebase.firestore.PersistentCacheSettings;
+import com.aves.flamingodb.MemoryCacheSettings;
+import com.aves.flamingodb.PersistentCacheSettings;
 
 /**
  * Marker interface implemented by all supported cache settings.

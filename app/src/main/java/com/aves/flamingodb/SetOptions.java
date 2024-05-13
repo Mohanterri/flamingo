@@ -14,15 +14,15 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkArgument;
+import static com.aves.flamingodb.util.Preconditions.checkArgument;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 
-import com.google.firebase.firestore.Transaction;
-import com.google.firebase.firestore.WriteBatch;
-import com.google.firebase.firestore.model.mutation.FieldMask;
+import com.aves.flamingodb.Transaction;
+import com.aves.flamingodb.WriteBatch;
+import com.aves.flamingodb.model.mutation.FieldMask;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -83,7 +83,7 @@ public final class SetOptions {
    */
   @NonNull
   public static SetOptions mergeFields(@NonNull List<String> fields) {
-    Set<com.google.firebase.firestore.model.FieldPath> fieldPaths = new HashSet<>();
+    Set<com.aves.flamingodb.model.FieldPath> fieldPaths = new HashSet<>();
 
     for (String field : fields) {
       fieldPaths.add(FieldPath.fromDotSeparatedPath(field).getInternalPath());
@@ -104,7 +104,7 @@ public final class SetOptions {
    */
   @NonNull
   public static SetOptions mergeFields(String... fields) {
-    Set<com.google.firebase.firestore.model.FieldPath> fieldPaths = new HashSet<>();
+    Set<com.aves.flamingodb.model.FieldPath> fieldPaths = new HashSet<>();
 
     for (String field : fields) {
       fieldPaths.add(FieldPath.fromDotSeparatedPath(field).getInternalPath());
@@ -124,7 +124,7 @@ public final class SetOptions {
    */
   @NonNull
   public static SetOptions mergeFieldPaths(@NonNull List<FieldPath> fields) {
-    Set<com.google.firebase.firestore.model.FieldPath> fieldPaths = new HashSet<>();
+    Set<com.aves.flamingodb.model.FieldPath> fieldPaths = new HashSet<>();
 
     for (FieldPath field : fields) {
       fieldPaths.add(field.getInternalPath());

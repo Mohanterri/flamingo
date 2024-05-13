@@ -14,18 +14,18 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.remote.Datastore.SSL_DEPENDENCY_ERROR_MESSAGE;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.remote.Datastore.SSL_DEPENDENCY_ERROR_MESSAGE;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
-import com.google.firebase.firestore.remote.Stream.StreamCallback;
-import com.google.firebase.firestore.util.AsyncQueue;
-import com.google.firebase.firestore.util.AsyncQueue.DelayedTask;
-import com.google.firebase.firestore.util.AsyncQueue.TimerId;
-import com.google.firebase.firestore.util.ExponentialBackoff;
-import com.google.firebase.firestore.util.Logger;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.remote.Stream.StreamCallback;
+import com.aves.flamingodb.util.AsyncQueue;
+import com.aves.flamingodb.util.AsyncQueue.DelayedTask;
+import com.aves.flamingodb.util.AsyncQueue.TimerId;
+import com.aves.flamingodb.util.ExponentialBackoff;
+import com.aves.flamingodb.util.Logger;
+import com.aves.flamingodb.util.Util;
 import io.grpc.ClientCall;
 import io.grpc.Metadata;
 import io.grpc.MethodDescriptor;

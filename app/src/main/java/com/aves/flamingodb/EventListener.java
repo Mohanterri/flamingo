@@ -16,7 +16,7 @@ package com.aves.flamingodb;
 
 import androidx.annotation.Nullable;
 
-import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.aves.flamingodb.FirebaseFirestoreException;
 
 /** An interface for event listeners. */
 public interface EventListener<T> {

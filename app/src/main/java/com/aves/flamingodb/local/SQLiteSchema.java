@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -24,10 +24,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.text.TextUtils;
 import androidx.annotation.VisibleForTesting;
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.proto.Target;
-import com.google.firebase.firestore.util.Consumer;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.proto.Target;
+import com.aves.flamingodb.util.Consumer;
+import com.aves.flamingodb.util.Logger;
 import com.google.protobuf.InvalidProtocolBufferException;
 import java.util.ArrayList;
 import java.util.List;

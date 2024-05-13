@@ -492,73 +492,73 @@ public  final class WriteBatch extends
     baseWrites_.remove(index);
   }
 
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(byte[] data)
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(java.io.InputStream input)
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseDelimitedFrom(java.io.InputStream input)
+  public static com.aves.flamingodb.proto.WriteBatch parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return parseDelimitedFrom(DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseDelimitedFrom(
+  public static com.aves.flamingodb.proto.WriteBatch parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.WriteBatch parseFrom(
+  public static com.aves.flamingodb.proto.WriteBatch parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -569,7 +569,7 @@ public  final class WriteBatch extends
   public static Builder newBuilder() {
     return (Builder) DEFAULT_INSTANCE.createBuilder();
   }
-  public static Builder newBuilder(com.google.firebase.firestore.proto.WriteBatch prototype) {
+  public static Builder newBuilder(com.aves.flamingodb.proto.WriteBatch prototype) {
     return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
   }
 
@@ -584,10 +584,10 @@ public  final class WriteBatch extends
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageLite.Builder<
-        com.google.firebase.firestore.proto.WriteBatch, Builder> implements
+        com.aves.flamingodb.proto.WriteBatch, Builder> implements
       // @@protoc_insertion_point(builder_implements:firestore.client.WriteBatch)
-      com.google.firebase.firestore.proto.WriteBatchOrBuilder {
-    // Construct using com.google.firebase.firestore.proto.WriteBatch.newBuilder()
+      com.aves.flamingodb.proto.WriteBatchOrBuilder {
+    // Construct using com.aves.flamingodb.proto.WriteBatch.newBuilder()
     private Builder() {
       super(DEFAULT_INSTANCE);
     }
@@ -1112,7 +1112,7 @@ public  final class WriteBatch extends
       Object arg0, Object arg1) {
     switch (method) {
       case NEW_MUTABLE_INSTANCE: {
-        return new com.google.firebase.firestore.proto.WriteBatch();
+        return new com.aves.flamingodb.proto.WriteBatch();
       }
       case NEW_BUILDER: {
         return new Builder();
@@ -1136,13 +1136,13 @@ public  final class WriteBatch extends
         return DEFAULT_INSTANCE;
       }
       case GET_PARSER: {
-        com.google.protobuf.Parser<com.google.firebase.firestore.proto.WriteBatch> parser = PARSER;
+        com.google.protobuf.Parser<com.aves.flamingodb.proto.WriteBatch> parser = PARSER;
         if (parser == null) {
-          synchronized (com.google.firebase.firestore.proto.WriteBatch.class) {
+          synchronized (com.aves.flamingodb.proto.WriteBatch.class) {
             parser = PARSER;
             if (parser == null) {
               parser =
-                  new DefaultInstanceBasedParser<com.google.firebase.firestore.proto.WriteBatch>(
+                  new DefaultInstanceBasedParser<com.aves.flamingodb.proto.WriteBatch>(
                       DEFAULT_INSTANCE);
               PARSER = parser;
             }
@@ -1162,7 +1162,7 @@ public  final class WriteBatch extends
 
 
   // @@protoc_insertion_point(class_scope:firestore.client.WriteBatch)
-  private static final com.google.firebase.firestore.proto.WriteBatch DEFAULT_INSTANCE;
+  private static final com.aves.flamingodb.proto.WriteBatch DEFAULT_INSTANCE;
   static {
     WriteBatch defaultInstance = new WriteBatch();
     // New instances are implicitly immutable so no need to make
@@ -1172,7 +1172,7 @@ public  final class WriteBatch extends
       WriteBatch.class, defaultInstance);
   }
 
-  public static com.google.firebase.firestore.proto.WriteBatch getDefaultInstance() {
+  public static com.aves.flamingodb.proto.WriteBatch getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 

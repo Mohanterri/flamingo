@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.model;
 
-import static com.google.firebase.firestore.model.DocumentCollections.emptyDocumentMap;
+import static com.aves.flamingodb.model.DocumentCollections.emptyDocumentMap;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

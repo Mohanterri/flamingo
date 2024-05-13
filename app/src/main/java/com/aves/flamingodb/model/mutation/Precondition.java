@@ -14,12 +14,12 @@
 
 package com.aves.flamingodb.model.mutation;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.SnapshotVersion;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.SnapshotVersion;
 
 /**
  * Encodes a precondition for a mutation. This follows the model that the backend accepts with the

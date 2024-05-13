@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb.model;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.core.FieldFilter;
-import com.google.firebase.firestore.core.Filter;
-import com.google.firebase.firestore.core.OrderBy;
-import com.google.firebase.firestore.core.Target;
+import com.aves.flamingodb.core.FieldFilter;
+import com.aves.flamingodb.core.Filter;
+import com.aves.flamingodb.core.OrderBy;
+import com.aves.flamingodb.core.Target;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;

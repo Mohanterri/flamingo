@@ -14,11 +14,11 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.MutableDocument;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.MutableDocument;
 import com.google.protobuf.ByteString;
 import io.grpc.Status;
 import java.util.List;

@@ -114,73 +114,73 @@ public  final class MutationQueue extends
     lastStreamToken_ = getDefaultInstance().getLastStreamToken();
   }
 
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(byte[] data)
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, data, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(java.io.InputStream input)
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseDelimitedFrom(java.io.InputStream input)
+  public static com.aves.flamingodb.proto.MutationQueue parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return parseDelimitedFrom(DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseDelimitedFrom(
+  public static com.aves.flamingodb.proto.MutationQueue parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageLite.parseFrom(
         DEFAULT_INSTANCE, input);
   }
-  public static com.google.firebase.firestore.proto.MutationQueue parseFrom(
+  public static com.aves.flamingodb.proto.MutationQueue parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -191,7 +191,7 @@ public  final class MutationQueue extends
   public static Builder newBuilder() {
     return (Builder) DEFAULT_INSTANCE.createBuilder();
   }
-  public static Builder newBuilder(com.google.firebase.firestore.proto.MutationQueue prototype) {
+  public static Builder newBuilder(com.aves.flamingodb.proto.MutationQueue prototype) {
     return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
   }
 
@@ -205,10 +205,10 @@ public  final class MutationQueue extends
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageLite.Builder<
-        com.google.firebase.firestore.proto.MutationQueue, Builder> implements
+        com.aves.flamingodb.proto.MutationQueue, Builder> implements
       // @@protoc_insertion_point(builder_implements:firestore.client.MutationQueue)
-      com.google.firebase.firestore.proto.MutationQueueOrBuilder {
-    // Construct using com.google.firebase.firestore.proto.MutationQueue.newBuilder()
+      com.aves.flamingodb.proto.MutationQueueOrBuilder {
+    // Construct using com.aves.flamingodb.proto.MutationQueue.newBuilder()
     private Builder() {
       super(DEFAULT_INSTANCE);
     }
@@ -321,7 +321,7 @@ public  final class MutationQueue extends
       Object arg0, Object arg1) {
     switch (method) {
       case NEW_MUTABLE_INSTANCE: {
-        return new com.google.firebase.firestore.proto.MutationQueue();
+        return new com.aves.flamingodb.proto.MutationQueue();
       }
       case NEW_BUILDER: {
         return new Builder();
@@ -341,13 +341,13 @@ public  final class MutationQueue extends
         return DEFAULT_INSTANCE;
       }
       case GET_PARSER: {
-        com.google.protobuf.Parser<com.google.firebase.firestore.proto.MutationQueue> parser = PARSER;
+        com.google.protobuf.Parser<com.aves.flamingodb.proto.MutationQueue> parser = PARSER;
         if (parser == null) {
-          synchronized (com.google.firebase.firestore.proto.MutationQueue.class) {
+          synchronized (com.aves.flamingodb.proto.MutationQueue.class) {
             parser = PARSER;
             if (parser == null) {
               parser =
-                  new DefaultInstanceBasedParser<com.google.firebase.firestore.proto.MutationQueue>(
+                  new DefaultInstanceBasedParser<com.aves.flamingodb.proto.MutationQueue>(
                       DEFAULT_INSTANCE);
               PARSER = parser;
             }
@@ -367,7 +367,7 @@ public  final class MutationQueue extends
 
 
   // @@protoc_insertion_point(class_scope:firestore.client.MutationQueue)
-  private static final com.google.firebase.firestore.proto.MutationQueue DEFAULT_INSTANCE;
+  private static final com.aves.flamingodb.proto.MutationQueue DEFAULT_INSTANCE;
   static {
     MutationQueue defaultInstance = new MutationQueue();
     // New instances are implicitly immutable so no need to make
@@ -377,7 +377,7 @@ public  final class MutationQueue extends
       MutationQueue.class, defaultInstance);
   }
 
-  public static com.google.firebase.firestore.proto.MutationQueue getDefaultInstance() {
+  public static com.aves.flamingodb.proto.MutationQueue getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 

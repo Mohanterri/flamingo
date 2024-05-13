@@ -15,7 +15,7 @@
 package com.aves.flamingodb.model.mutation;
 
 import com.google.auto.value.AutoValue;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.model.DocumentKey;
 
 /**
  * Representation of an overlay computed by Firestore.

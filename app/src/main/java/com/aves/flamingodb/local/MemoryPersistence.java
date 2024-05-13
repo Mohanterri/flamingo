@@ -14,10 +14,10 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
-import com.google.firebase.firestore.auth.User;
-import com.google.firebase.firestore.util.Supplier;
+import com.aves.flamingodb.auth.User;
+import com.aves.flamingodb.util.Supplier;
 import java.util.HashMap;
 import java.util.Map;
 

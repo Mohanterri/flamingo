@@ -14,18 +14,18 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
-import com.google.firebase.firestore.core.UserData.ParsedSetData;
-import com.google.firebase.firestore.core.UserData.ParsedUpdateData;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.util.Executors;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.core.UserData.ParsedSetData;
+import com.aves.flamingodb.core.UserData.ParsedUpdateData;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.util.Executors;
+import com.aves.flamingodb.util.Util;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -42,11 +42,11 @@ import java.util.concurrent.ExecutionException;
  * @see FirebaseFirestore#runTransaction(Function)
  */
 public class Transaction {
-  private final com.google.firebase.firestore.core.Transaction transaction;
+  private final com.aves.flamingodb.core.Transaction transaction;
   private final FirebaseFirestore firestore;
 
   Transaction(
-      com.google.firebase.firestore.core.Transaction transaction, FirebaseFirestore firestore) {
+      com.aves.flamingodb.core.Transaction transaction, FirebaseFirestore firestore) {
     this.transaction = checkNotNull(transaction);
     this.firestore = checkNotNull(firestore);
   }

@@ -24,7 +24,7 @@ public interface MaybeDocumentOrBuilder extends
    * <code>.firestore.client.NoDocument no_document = 1;</code>
    * @return The noDocument.
    */
-  com.google.firebase.firestore.proto.NoDocument getNoDocument();
+  com.aves.flamingodb.proto.NoDocument getNoDocument();
 
   /**
    * <pre>
@@ -62,7 +62,7 @@ public interface MaybeDocumentOrBuilder extends
    * <code>.firestore.client.UnknownDocument unknown_document = 3;</code>
    * @return The unknownDocument.
    */
-  com.google.firebase.firestore.proto.UnknownDocument getUnknownDocument();
+  com.aves.flamingodb.proto.UnknownDocument getUnknownDocument();
 
   /**
    * <pre>
@@ -77,5 +77,5 @@ public interface MaybeDocumentOrBuilder extends
    */
   boolean getHasCommittedMutations();
 
-  public com.google.firebase.firestore.proto.MaybeDocument.DocumentTypeCase getDocumentTypeCase();
+  public com.aves.flamingodb.proto.MaybeDocument.DocumentTypeCase getDocumentTypeCase();
 }

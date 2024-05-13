@@ -14,23 +14,23 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
 import com.google.firebase.database.collection.ImmutableSortedSet;
-import com.google.firebase.firestore.core.DocumentViewChange;
-import com.google.firebase.firestore.core.Target;
-import com.google.firebase.firestore.local.QueryPurpose;
-import com.google.firebase.firestore.local.TargetData;
-import com.google.firebase.firestore.model.DatabaseId;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.remote.WatchChange.DocumentChange;
-import com.google.firebase.firestore.remote.WatchChange.ExistenceFilterWatchChange;
-import com.google.firebase.firestore.remote.WatchChange.WatchTargetChange;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.core.DocumentViewChange;
+import com.aves.flamingodb.core.Target;
+import com.aves.flamingodb.local.QueryPurpose;
+import com.aves.flamingodb.local.TargetData;
+import com.aves.flamingodb.model.DatabaseId;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.remote.WatchChange.DocumentChange;
+import com.aves.flamingodb.remote.WatchChange.ExistenceFilterWatchChange;
+import com.aves.flamingodb.remote.WatchChange.WatchTargetChange;
+import com.aves.flamingodb.util.Logger;
 import com.google.protobuf.ByteString;
 import java.util.ArrayList;
 import java.util.Collection;

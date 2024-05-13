@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.firebase.firestore
+package com.aves.flamingodb
 
 import androidx.annotation.Keep
 import com.google.firebase.Firebase
 import com.google.firebase.FirebaseApp
 import com.google.firebase.components.Component
 import com.google.firebase.components.ComponentRegistrar
-import com.google.firebase.firestore.*
-import com.google.firebase.firestore.util.Executors.BACKGROUND_EXECUTOR
+import com.aves.flamingodb.*
+import com.aves.flamingodb.util.Executors.BACKGROUND_EXECUTOR
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.channels.trySendBlocking

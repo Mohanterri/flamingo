@@ -15,10 +15,10 @@
 package com.aves.flamingodb.model.mutation;
 
 import com.google.firebase.database.collection.ImmutableSortedMap;
-import com.google.firebase.firestore.model.DocumentCollections;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.util.Assert;
+import com.aves.flamingodb.model.DocumentCollections;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.util.Assert;
 import com.google.protobuf.ByteString;
 import java.util.List;
 

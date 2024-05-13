@@ -15,7 +15,7 @@
 package com.aves.flamingodb.bundle;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.util.Logger;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;

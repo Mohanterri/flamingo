@@ -16,7 +16,7 @@ package com.aves.flamingodb;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.util.Util;
 
 /** Immutable class representing a {@code GeoPoint} in Cloud Firestore */
 public class GeoPoint implements Comparable<GeoPoint> {

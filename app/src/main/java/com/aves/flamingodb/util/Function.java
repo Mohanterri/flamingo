@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
  *
  * <p>To use an existing function (say, named {@code function}) in a context where the <i>other
  * type</i> of function is expected, use the method reference {@code function::apply}. A future
- * version of {@code com.google.firebase.firestore.util.Function} will be made to <i>extend</i>
+ * version of {@code com.aves.flamingodb.util.Function} will be made to <i>extend</i>
  * {@code java.util.function.Function}, making conversion code necessary only in one direction. At
  * that time, this interface will be officially discouraged.
  *

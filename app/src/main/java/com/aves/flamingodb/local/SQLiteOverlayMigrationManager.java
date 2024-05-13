@@ -14,12 +14,12 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.fail;
 
 import androidx.annotation.VisibleForTesting;
-import com.google.firebase.firestore.auth.User;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.mutation.MutationBatch;
+import com.aves.flamingodb.auth.User;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.mutation.MutationBatch;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

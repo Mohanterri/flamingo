@@ -14,11 +14,11 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.fail;
 
 import com.google.firebase.database.collection.ImmutableSortedSet;
-import com.google.firebase.firestore.core.DocumentViewChange;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.core.DocumentViewChange;
+import com.aves.flamingodb.model.DocumentKey;
 import com.google.protobuf.ByteString;
 import java.util.HashMap;
 import java.util.Map;

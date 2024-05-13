@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.core;
 
-import com.google.firebase.firestore.model.DatabaseId;
+import com.aves.flamingodb.model.DatabaseId;
 
 /** Contains info about host, project id and database */
 public final class DatabaseInfo {

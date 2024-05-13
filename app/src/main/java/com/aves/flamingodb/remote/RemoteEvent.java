@@ -14,10 +14,10 @@
 
 package com.aves.flamingodb.remote;
 
-import com.google.firebase.firestore.local.QueryPurpose;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.SnapshotVersion;
+import com.aves.flamingodb.local.QueryPurpose;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.SnapshotVersion;
 import java.util.Map;
 import java.util.Set;
 

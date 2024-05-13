@@ -140,5 +140,5 @@ public interface TargetOrBuilder extends
    */
   com.google.protobuf.Timestamp getLastLimboFreeSnapshotVersion();
 
-  public com.google.firebase.firestore.proto.Target.TargetTypeCase getTargetTypeCase();
+  public com.aves.flamingodb.proto.Target.TargetTypeCase getTargetTypeCase();
 }

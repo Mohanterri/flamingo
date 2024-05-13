@@ -14,26 +14,26 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
-import static com.google.firebase.firestore.util.Util.exceptionFromStatus;
+import static com.aves.flamingodb.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Util.exceptionFromStatus;
 
 import android.content.Context;
 import android.os.Build;
 import androidx.annotation.Nullable;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
-import com.google.firebase.firestore.AggregateField;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.auth.CredentialsProvider;
-import com.google.firebase.firestore.auth.User;
-import com.google.firebase.firestore.core.DatabaseInfo;
-import com.google.firebase.firestore.core.Query;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.model.mutation.Mutation;
-import com.google.firebase.firestore.model.mutation.MutationResult;
-import com.google.firebase.firestore.util.AsyncQueue;
+import com.aves.flamingodb.AggregateField;
+import com.aves.flamingodb.FirebaseFirestoreException;
+import com.aves.flamingodb.auth.CredentialsProvider;
+import com.aves.flamingodb.auth.User;
+import com.aves.flamingodb.core.DatabaseInfo;
+import com.aves.flamingodb.core.Query;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.model.mutation.Mutation;
+import com.aves.flamingodb.model.mutation.MutationResult;
+import com.aves.flamingodb.util.AsyncQueue;
 import com.google.firestore.v1.BatchGetDocumentsRequest;
 import com.google.firestore.v1.BatchGetDocumentsResponse;
 import com.google.firestore.v1.CommitRequest;

@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
-import com.google.firebase.firestore.core.OrderBy.Direction;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldPath;
-import com.google.firebase.firestore.model.Values;
+import com.aves.flamingodb.core.OrderBy.Direction;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldPath;
+import com.aves.flamingodb.model.Values;
 import com.google.firestore.v1.Value;
 import java.util.List;
 

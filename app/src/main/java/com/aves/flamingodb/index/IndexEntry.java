@@ -14,10 +14,10 @@
 
 package com.aves.flamingodb.index;
 
-import static com.google.firebase.firestore.util.Util.compareByteArrays;
+import static com.aves.flamingodb.util.Util.compareByteArrays;
 
 import com.google.auto.value.AutoValue;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.model.DocumentKey;
 
 /** Represents an index entry saved by the SDK in its local storage. */
 @AutoValue

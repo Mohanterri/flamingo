@@ -16,8 +16,8 @@ package com.aves.flamingodb.core;
 
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.util.Function;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.util.Function;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

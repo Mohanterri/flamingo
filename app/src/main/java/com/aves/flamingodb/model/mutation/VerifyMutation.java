@@ -16,9 +16,9 @@ package com.aves.flamingodb.model.mutation;
 
 import androidx.annotation.Nullable;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.util.Assert;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.util.Assert;
 
 /**
  * A mutation that verifies the existence of the document at the given key with the provided

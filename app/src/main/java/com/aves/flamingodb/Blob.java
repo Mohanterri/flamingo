@@ -14,12 +14,12 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.util.Util;
 import com.google.protobuf.ByteString;
 
 /** Immutable class representing an array of bytes in Cloud Firestore. */

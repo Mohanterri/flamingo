@@ -18,11 +18,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
-import com.google.firebase.firestore.AggregateQuerySnapshot;
-import com.google.firebase.firestore.AggregateSource;
-import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.util.Executors;
-import com.google.firebase.firestore.util.Preconditions;
+import com.aves.flamingodb.AggregateQuerySnapshot;
+import com.aves.flamingodb.AggregateSource;
+import com.aves.flamingodb.Query;
+import com.aves.flamingodb.util.Executors;
+import com.aves.flamingodb.util.Preconditions;
 import java.util.List;
 import java.util.Objects;
 

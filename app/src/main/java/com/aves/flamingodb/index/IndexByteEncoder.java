@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.index;
 
-import com.google.firebase.firestore.model.FieldIndex;
+import com.aves.flamingodb.model.FieldIndex;
 import com.google.protobuf.ByteString;
 
 /**

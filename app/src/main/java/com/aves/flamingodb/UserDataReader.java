@@ -14,31 +14,31 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.FieldValue.ArrayRemoveFieldValue;
-import com.google.firebase.firestore.FieldValue.ArrayUnionFieldValue;
-import com.google.firebase.firestore.FieldValue.DeleteFieldValue;
-import com.google.firebase.firestore.FieldValue.ServerTimestampFieldValue;
-import com.google.firebase.firestore.core.UserData;
-import com.google.firebase.firestore.core.UserData.ParseAccumulator;
-import com.google.firebase.firestore.core.UserData.ParseContext;
-import com.google.firebase.firestore.core.UserData.ParsedSetData;
-import com.google.firebase.firestore.core.UserData.ParsedUpdateData;
-import com.google.firebase.firestore.model.DatabaseId;
-import com.google.firebase.firestore.model.FieldPath;
-import com.google.firebase.firestore.model.ObjectValue;
-import com.google.firebase.firestore.model.mutation.ArrayTransformOperation;
-import com.google.firebase.firestore.model.mutation.FieldMask;
-import com.google.firebase.firestore.model.mutation.NumericIncrementTransformOperation;
-import com.google.firebase.firestore.model.mutation.ServerTimestampOperation;
-import com.google.firebase.firestore.util.Assert;
-import com.google.firebase.firestore.util.CustomClassMapper;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.FieldValue.ArrayRemoveFieldValue;
+import com.aves.flamingodb.FieldValue.ArrayUnionFieldValue;
+import com.aves.flamingodb.FieldValue.DeleteFieldValue;
+import com.aves.flamingodb.FieldValue.ServerTimestampFieldValue;
+import com.aves.flamingodb.core.UserData;
+import com.aves.flamingodb.core.UserData.ParseAccumulator;
+import com.aves.flamingodb.core.UserData.ParseContext;
+import com.aves.flamingodb.core.UserData.ParsedSetData;
+import com.aves.flamingodb.core.UserData.ParsedUpdateData;
+import com.aves.flamingodb.model.DatabaseId;
+import com.aves.flamingodb.model.FieldPath;
+import com.aves.flamingodb.model.ObjectValue;
+import com.aves.flamingodb.model.mutation.ArrayTransformOperation;
+import com.aves.flamingodb.model.mutation.FieldMask;
+import com.aves.flamingodb.model.mutation.NumericIncrementTransformOperation;
+import com.aves.flamingodb.model.mutation.ServerTimestampOperation;
+import com.aves.flamingodb.util.Assert;
+import com.aves.flamingodb.util.CustomClassMapper;
+import com.aves.flamingodb.util.Util;
 import com.google.firestore.v1.ArrayValue;
 import com.google.firestore.v1.MapValue;
 import com.google.firestore.v1.Value;
@@ -113,7 +113,7 @@ public final class UserDataReader {
 
     for (Entry<String, Object> entry : data.entrySet()) {
       FieldPath fieldPath =
-          com.google.firebase.firestore.FieldPath.fromDotSeparatedPath(entry.getKey())
+          com.aves.flamingodb.FieldPath.fromDotSeparatedPath(entry.getKey())
               .getInternalPath();
       Object fieldValue = entry.getValue();
 
@@ -155,17 +155,17 @@ public final class UserDataReader {
 
       hardAssert(
           fieldPath instanceof String
-              || fieldPath instanceof com.google.firebase.firestore.FieldPath,
+              || fieldPath instanceof com.aves.flamingodb.FieldPath,
           "Expected argument to be String or FieldPath.");
 
       FieldPath parsedField;
 
       if (fieldPath instanceof String) {
         parsedField =
-            com.google.firebase.firestore.FieldPath.fromDotSeparatedPath((String) fieldPath)
+            com.aves.flamingodb.FieldPath.fromDotSeparatedPath((String) fieldPath)
                 .getInternalPath();
       } else {
-        parsedField = ((com.google.firebase.firestore.FieldPath) fieldPath).getInternalPath();
+        parsedField = ((com.aves.flamingodb.FieldPath) fieldPath).getInternalPath();
       }
 
       if (fieldValue instanceof DeleteFieldValue) {
@@ -250,12 +250,12 @@ public final class UserDataReader {
     if (input instanceof Map) {
       return parseMap((Map<?, ?>) input, context);
 
-    } else if (input instanceof com.google.firebase.firestore.FieldValue) {
+    } else if (input instanceof com.aves.flamingodb.FieldValue) {
       // FieldValues usually parse into transforms (except FieldValue.delete()) in which case we do
       // not want to include this field in our parsed data (as doing so will overwrite the field
       // directly prior to the transform trying to transform it). So we don't add this location to
       // context.fieldMask and we return null as our parsing result.
-      this.parseSentinelFieldValue((com.google.firebase.firestore.FieldValue) input, context);
+      this.parseSentinelFieldValue((com.aves.flamingodb.FieldValue) input, context);
       return null;
 
     } else {
@@ -322,7 +322,7 @@ public final class UserDataReader {
    * "Parses" the provided FieldValue, adding any necessary transforms to context.fieldTransforms.
    */
   private void parseSentinelFieldValue(
-      com.google.firebase.firestore.FieldValue value, ParseContext context) {
+      com.aves.flamingodb.FieldValue value, ParseContext context) {
     // Sentinels are only supported with writes, and not within arrays.
     if (!context.isWrite()) {
       throw context.createError(
@@ -366,10 +366,10 @@ public final class UserDataReader {
       context.addToFieldTransforms(context.getPath(), arrayRemove);
 
     } else if (value
-        instanceof com.google.firebase.firestore.FieldValue.NumericIncrementFieldValue) {
-      com.google.firebase.firestore.FieldValue.NumericIncrementFieldValue
+        instanceof com.aves.flamingodb.FieldValue.NumericIncrementFieldValue) {
+      com.aves.flamingodb.FieldValue.NumericIncrementFieldValue
           numericIncrementFieldValue =
-              (com.google.firebase.firestore.FieldValue.NumericIncrementFieldValue) value;
+              (com.aves.flamingodb.FieldValue.NumericIncrementFieldValue) value;
       Value operand = parseQueryValue(numericIncrementFieldValue.getOperand());
       NumericIncrementTransformOperation incrementOperation =
           new NumericIncrementTransformOperation(operand);

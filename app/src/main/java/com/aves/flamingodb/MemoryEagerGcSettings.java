@@ -17,7 +17,7 @@ package com.aves.flamingodb;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.google.firebase.firestore.MemoryGarbageCollectorSettings;
+import com.aves.flamingodb.MemoryGarbageCollectorSettings;
 
 /**
  * Configures the SDK to use an eager garbage collector for memory cache. The eager garbage

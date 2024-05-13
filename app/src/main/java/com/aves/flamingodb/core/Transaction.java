@@ -14,26 +14,26 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import android.annotation.SuppressLint;
 import androidx.annotation.Nullable;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.FirebaseFirestoreException.Code;
-import com.google.firebase.firestore.core.UserData.ParsedSetData;
-import com.google.firebase.firestore.core.UserData.ParsedUpdateData;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.model.mutation.DeleteMutation;
-import com.google.firebase.firestore.model.mutation.Mutation;
-import com.google.firebase.firestore.model.mutation.Precondition;
-import com.google.firebase.firestore.model.mutation.VerifyMutation;
-import com.google.firebase.firestore.remote.Datastore;
-import com.google.firebase.firestore.util.Executors;
+import com.aves.flamingodb.FirebaseFirestoreException;
+import com.aves.flamingodb.FirebaseFirestoreException.Code;
+import com.aves.flamingodb.core.UserData.ParsedSetData;
+import com.aves.flamingodb.core.UserData.ParsedUpdateData;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.model.mutation.DeleteMutation;
+import com.aves.flamingodb.model.mutation.Mutation;
+import com.aves.flamingodb.model.mutation.Precondition;
+import com.aves.flamingodb.model.mutation.VerifyMutation;
+import com.aves.flamingodb.remote.Datastore;
+import com.aves.flamingodb.util.Executors;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;

@@ -15,7 +15,7 @@
 package com.aves.flamingodb.local;
 
 import android.util.SparseArray;
-import com.google.firebase.firestore.util.Consumer;
+import com.aves.flamingodb.util.Consumer;
 
 /**
  * Persistence layers intending to use LRU Garbage collection should implement this interface. This

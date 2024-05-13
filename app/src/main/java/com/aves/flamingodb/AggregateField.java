@@ -18,7 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 
-import com.google.firebase.firestore.FieldPath;
+import com.aves.flamingodb.FieldPath;
 
 import java.util.Objects;
 

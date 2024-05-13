@@ -14,20 +14,20 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.core.Query.LimitType.LIMIT_TO_FIRST;
-import static com.google.firebase.firestore.core.Query.LimitType.LIMIT_TO_LAST;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
-import static com.google.firebase.firestore.util.Util.compareIntegers;
+import static com.aves.flamingodb.core.Query.LimitType.LIMIT_TO_FIRST;
+import static com.aves.flamingodb.core.Query.LimitType.LIMIT_TO_LAST;
+import static com.aves.flamingodb.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Util.compareIntegers;
 
 import androidx.annotation.Nullable;
 import com.google.firebase.database.collection.ImmutableSortedMap;
 import com.google.firebase.database.collection.ImmutableSortedSet;
-import com.google.firebase.firestore.core.DocumentViewChange.Type;
-import com.google.firebase.firestore.core.ViewSnapshot.SyncState;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.DocumentSet;
-import com.google.firebase.firestore.remote.TargetChange;
+import com.aves.flamingodb.core.DocumentViewChange.Type;
+import com.aves.flamingodb.core.ViewSnapshot.SyncState;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.DocumentSet;
+import com.aves.flamingodb.remote.TargetChange;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

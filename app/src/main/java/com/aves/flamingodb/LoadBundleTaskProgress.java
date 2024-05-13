@@ -17,7 +17,7 @@ package com.aves.flamingodb;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import com.google.firebase.firestore.bundle.BundleMetadata;
+import com.aves.flamingodb.bundle.BundleMetadata;
 
 /** Represents a progress update or a final state from loading bundles. */
 public final class LoadBundleTaskProgress {

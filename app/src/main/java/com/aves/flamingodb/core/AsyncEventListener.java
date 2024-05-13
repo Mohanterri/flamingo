@@ -15,8 +15,8 @@
 package com.aves.flamingodb.core;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.aves.flamingodb.EventListener;
+import com.aves.flamingodb.FirebaseFirestoreException;
 import java.util.concurrent.Executor;
 
 /**

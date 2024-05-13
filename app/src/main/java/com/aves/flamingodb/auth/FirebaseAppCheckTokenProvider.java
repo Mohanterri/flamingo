@@ -24,18 +24,19 @@ import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.appcheck.AppCheckTokenResult;
 import com.google.firebase.appcheck.interop.AppCheckTokenListener;
 import com.google.firebase.appcheck.interop.InteropAppCheckTokenProvider;
-import com.google.firebase.firestore.util.Executors;
-import com.google.firebase.firestore.util.Listener;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.util.Executors;
+import com.aves.flamingodb.util.Listener;
+import com.aves.flamingodb.util.Logger;
 import com.google.firebase.inject.Deferred;
 import com.google.firebase.inject.Provider;
+
+import javax.annotation.Nonnull;
 
 /** FirebaseAppCheckTokenProvider uses Firebase AppCheck to get an AppCheck token. */
 public final class FirebaseAppCheckTokenProvider extends CredentialsProvider<String> {
 
   private static final String LOG_TAG = "FirebaseAppCheckTokenProvider";
 
-  /** The listener to be notified of AppCheck token changes. */
   @Nullable
   @GuardedBy("this")
   private Listener<String> changeListener;
@@ -72,7 +73,7 @@ public final class FirebaseAppCheckTokenProvider extends CredentialsProvider<Str
   }
 
   /** Invoked when the AppCheck token changes. */
-  private synchronized void onTokenChanged(@NonNull AppCheckTokenResult result) {
+  private synchronized void onTokenChanged(@Nonnull AppCheckTokenResult result) {
     if (result.getError() != null) {
       Logger.warn(
           LOG_TAG,
@@ -116,6 +117,7 @@ public final class FirebaseAppCheckTokenProvider extends CredentialsProvider<Str
     forceRefresh = true;
   }
 
+
   /** Remove the listener for AppCheck token changes. */
   @Override
   public synchronized void removeChangeListener() {
@@ -128,7 +130,7 @@ public final class FirebaseAppCheckTokenProvider extends CredentialsProvider<Str
 
   /** Registers a listener that will be notified when AppCheck token changes. */
   @Override
-  public synchronized void setChangeListener(@NonNull Listener<String> changeListener) {
+  public synchronized void setChangeListener(@Nonnull com.aves.flamingodb.util.Listener<String> changeListener) {
     this.changeListener = changeListener;
   }
 }

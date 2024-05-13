@@ -14,20 +14,20 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.util.Assert.hardAssertNonNull;
+import static com.aves.flamingodb.util.Assert.hardAssertNonNull;
 
 import android.content.Context;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
-import com.google.firebase.firestore.auth.User;
-import com.google.firebase.firestore.local.IndexBackfiller;
-import com.google.firebase.firestore.local.LocalStore;
-import com.google.firebase.firestore.local.Persistence;
-import com.google.firebase.firestore.local.Scheduler;
-import com.google.firebase.firestore.remote.ConnectivityMonitor;
-import com.google.firebase.firestore.remote.Datastore;
-import com.google.firebase.firestore.remote.RemoteStore;
-import com.google.firebase.firestore.util.AsyncQueue;
+import com.aves.flamingodb.FirebaseFirestoreSettings;
+import com.aves.flamingodb.auth.User;
+import com.aves.flamingodb.local.IndexBackfiller;
+import com.aves.flamingodb.local.LocalStore;
+import com.aves.flamingodb.local.Persistence;
+import com.aves.flamingodb.local.Scheduler;
+import com.aves.flamingodb.remote.ConnectivityMonitor;
+import com.aves.flamingodb.remote.Datastore;
+import com.aves.flamingodb.remote.RemoteStore;
+import com.aves.flamingodb.util.AsyncQueue;
 
 /**
  * Initializes and wires up all core components for Firestore.

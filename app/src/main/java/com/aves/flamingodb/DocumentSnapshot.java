@@ -14,19 +14,19 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.FieldPath;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.GeoPoint;
-import com.google.firebase.firestore.SnapshotMetadata;
-import com.google.firebase.firestore.UserDataWriter;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.util.CustomClassMapper;
+import com.aves.flamingodb.FieldPath;
+import com.aves.flamingodb.FirebaseFirestore;
+import com.aves.flamingodb.GeoPoint;
+import com.aves.flamingodb.SnapshotMetadata;
+import com.aves.flamingodb.UserDataWriter;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.util.CustomClassMapper;
 import com.google.firestore.v1.Value;
 import java.util.Date;
 import java.util.Map;
@@ -51,13 +51,13 @@ public class DocumentSnapshot {
    */
   public enum ServerTimestampBehavior {
     /**
-     * Return {@code null} for {@link com.google.firebase.firestore.FieldValue#serverTimestamp
+     * Return {@code null} for {@link com.aves.flamingodb.FieldValue#serverTimestamp
      * ServerTimestamps} that have not yet been set to their final value.
      */
     NONE,
 
     /**
-     * Return local estimates for {@link com.google.firebase.firestore.FieldValue#serverTimestamp
+     * Return local estimates for {@link com.aves.flamingodb.FieldValue#serverTimestamp
      * ServerTimestamps} that have not yet been set to their final value. This estimate will likely
      * differ from the final value and may cause these pending values to change once the server
      * result becomes available.
@@ -65,7 +65,7 @@ public class DocumentSnapshot {
     ESTIMATE,
 
     /**
-     * Return the previous value for {@link com.google.firebase.firestore.FieldValue#serverTimestamp
+     * Return the previous value for {@link com.aves.flamingodb.FieldValue#serverTimestamp
      * ServerTimestamps} that have not yet been set to their final value.
      */
     PREVIOUS;
@@ -508,7 +508,7 @@ public class DocumentSnapshot {
 
   @Nullable
   private Object getInternal(
-      @NonNull com.google.firebase.firestore.model.FieldPath fieldPath,
+      @NonNull com.aves.flamingodb.model.FieldPath fieldPath,
       @NonNull ServerTimestampBehavior serverTimestampBehavior) {
     if (doc != null) {
       Value val = doc.getField(fieldPath);

@@ -14,14 +14,14 @@
 
 package com.aves.flamingodb.model.mutation;
 
-import static com.google.firebase.firestore.model.Values.isDouble;
-import static com.google.firebase.firestore.model.Values.isInteger;
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.model.Values.isDouble;
+import static com.aves.flamingodb.model.Values.isInteger;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.model.Values;
+import com.aves.flamingodb.model.Values;
 import com.google.firestore.v1.Value;
 
 /**

@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.local;
 
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.mutation.FieldMask;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.mutation.FieldMask;
 import javax.annotation.Nullable;
 
 /** Represents a local view (overlay) of a document, and the fields that are locally mutated. */

@@ -14,9 +14,9 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
-import static com.google.firebase.firestore.util.Util.repeatSequence;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Util.repeatSequence;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -30,15 +30,15 @@ import android.database.sqlite.SQLiteStatement;
 import android.database.sqlite.SQLiteTransactionListener;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.FirebaseFirestoreException.Code;
-import com.google.firebase.firestore.auth.User;
-import com.google.firebase.firestore.model.DatabaseId;
-import com.google.firebase.firestore.util.Consumer;
-import com.google.firebase.firestore.util.FileUtil;
-import com.google.firebase.firestore.util.Function;
-import com.google.firebase.firestore.util.Logger;
-import com.google.firebase.firestore.util.Supplier;
+import com.aves.flamingodb.FirebaseFirestoreException;
+import com.aves.flamingodb.FirebaseFirestoreException.Code;
+import com.aves.flamingodb.auth.User;
+import com.aves.flamingodb.model.DatabaseId;
+import com.aves.flamingodb.util.Consumer;
+import com.aves.flamingodb.util.FileUtil;
+import com.aves.flamingodb.util.Function;
+import com.aves.flamingodb.util.Logger;
+import com.aves.flamingodb.util.Supplier;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

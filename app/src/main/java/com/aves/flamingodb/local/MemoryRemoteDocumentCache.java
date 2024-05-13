@@ -14,18 +14,18 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.model.DocumentCollections.emptyDocumentMap;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.model.DocumentCollections.emptyDocumentMap;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.firebase.database.collection.ImmutableSortedMap;
-import com.google.firebase.firestore.core.Query;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldIndex.IndexOffset;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.SnapshotVersion;
+import com.aves.flamingodb.core.Query;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldIndex.IndexOffset;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.SnapshotVersion;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;

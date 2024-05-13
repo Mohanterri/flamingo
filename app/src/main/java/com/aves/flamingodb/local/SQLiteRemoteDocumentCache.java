@@ -14,26 +14,26 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.model.DocumentCollections.emptyDocumentMap;
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
-import static com.google.firebase.firestore.util.Util.firstNEntries;
-import static com.google.firebase.firestore.util.Util.repeatSequence;
+import static com.aves.flamingodb.model.DocumentCollections.emptyDocumentMap;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Util.firstNEntries;
+import static com.aves.flamingodb.util.Util.repeatSequence;
 
 import android.database.Cursor;
 import androidx.annotation.VisibleForTesting;
 import com.google.firebase.Timestamp;
 import com.google.firebase.database.collection.ImmutableSortedMap;
-import com.google.firebase.firestore.core.Query;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldIndex.IndexOffset;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.util.BackgroundQueue;
-import com.google.firebase.firestore.util.Executors;
-import com.google.firebase.firestore.util.Function;
+import com.aves.flamingodb.core.Query;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldIndex.IndexOffset;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.util.BackgroundQueue;
+import com.aves.flamingodb.util.Executors;
+import com.aves.flamingodb.util.Function;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
 import java.util.ArrayList;
@@ -286,7 +286,7 @@ final class SQLiteRemoteDocumentCache implements RemoteDocumentCache {
       byte[] bytes, int readTimeSeconds, int readTimeNanos) {
     try {
       return serializer
-          .decodeMaybeDocument(com.google.firebase.firestore.proto.MaybeDocument.parseFrom(bytes))
+          .decodeMaybeDocument(com.aves.flamingodb.proto.MaybeDocument.parseFrom(bytes))
           .setReadTime(new SnapshotVersion(new Timestamp(readTimeSeconds, readTimeNanos)));
     } catch (InvalidProtocolBufferException e) {
       throw fail("MaybeDocument failed to parse: %s", e);

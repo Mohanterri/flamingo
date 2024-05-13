@@ -14,12 +14,12 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.ListenSource;
-import com.google.firebase.firestore.core.SyncEngine.SyncEngineCallback;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.EventListener;
+import com.aves.flamingodb.ListenSource;
+import com.aves.flamingodb.core.SyncEngine.SyncEngineCallback;
+import com.aves.flamingodb.util.Util;
 import io.grpc.Status;
 import java.util.ArrayList;
 import java.util.HashMap;

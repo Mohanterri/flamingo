@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -24,7 +24,7 @@ import com.google.firebase.FirebaseAppLifecycleListener;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.appcheck.interop.InteropAppCheckTokenProvider;
 import com.google.firebase.auth.internal.InternalAuthProvider;
-import com.google.firebase.firestore.remote.GrpcMetadataProvider;
+import com.aves.flamingodb.remote.GrpcMetadataProvider;
 import com.google.firebase.inject.Deferred;
 import java.util.ArrayList;
 import java.util.HashMap;

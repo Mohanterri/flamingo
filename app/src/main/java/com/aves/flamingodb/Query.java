@@ -14,10 +14,10 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.core.Query.LimitType.LIMIT_TO_LAST;
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.core.Query.LimitType.LIMIT_TO_LAST;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import android.app.Activity;
 import androidx.annotation.NonNull;
@@ -25,28 +25,28 @@ import androidx.annotation.Nullable;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
 import com.google.android.gms.tasks.Tasks;
-import com.google.firebase.firestore.FirebaseFirestoreException.Code;
-import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.firestore.SnapshotListenOptions;
-import com.google.firebase.firestore.Source;
-import com.google.firebase.firestore.core.ActivityScope;
-import com.google.firebase.firestore.core.AsyncEventListener;
-import com.google.firebase.firestore.core.Bound;
-import com.google.firebase.firestore.core.CompositeFilter;
-import com.google.firebase.firestore.core.EventManager.ListenOptions;
-import com.google.firebase.firestore.core.FieldFilter;
-import com.google.firebase.firestore.core.FieldFilter.Operator;
-import com.google.firebase.firestore.core.ListenerRegistrationImpl;
-import com.google.firebase.firestore.core.OrderBy;
-import com.google.firebase.firestore.core.QueryListener;
-import com.google.firebase.firestore.core.ViewSnapshot;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.model.ServerTimestamps;
-import com.google.firebase.firestore.model.Values;
-import com.google.firebase.firestore.util.Executors;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.FirebaseFirestoreException.Code;
+import com.aves.flamingodb.QuerySnapshot;
+import com.aves.flamingodb.SnapshotListenOptions;
+import com.aves.flamingodb.Source;
+import com.aves.flamingodb.core.ActivityScope;
+import com.aves.flamingodb.core.AsyncEventListener;
+import com.aves.flamingodb.core.Bound;
+import com.aves.flamingodb.core.CompositeFilter;
+import com.aves.flamingodb.core.EventManager.ListenOptions;
+import com.aves.flamingodb.core.FieldFilter;
+import com.aves.flamingodb.core.FieldFilter.Operator;
+import com.aves.flamingodb.core.ListenerRegistrationImpl;
+import com.aves.flamingodb.core.OrderBy;
+import com.aves.flamingodb.core.QueryListener;
+import com.aves.flamingodb.core.ViewSnapshot;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.model.ServerTimestamps;
+import com.aves.flamingodb.model.Values;
+import com.aves.flamingodb.util.Executors;
+import com.aves.flamingodb.util.Util;
 import com.google.firestore.v1.ArrayValue;
 import com.google.firestore.v1.Value;
 import java.util.ArrayList;
@@ -65,7 +65,7 @@ import java.util.concurrent.Executor;
  * code that does so.
  */
 public class Query {
-  final com.google.firebase.firestore.core.Query query;
+  final com.aves.flamingodb.core.Query query;
 
   final FirebaseFirestore firestore;
 
@@ -75,7 +75,7 @@ public class Query {
     DESCENDING
   }
 
-  Query(com.google.firebase.firestore.core.Query query, FirebaseFirestore firestore) {
+  Query(com.aves.flamingodb.core.Query query, FirebaseFirestore firestore) {
     this.query = checkNotNull(query);
     this.firestore = checkNotNull(firestore);
   }
@@ -400,7 +400,7 @@ public class Query {
    */
   @NonNull
   public Query where(@NonNull Filter filter) {
-    com.google.firebase.firestore.core.Filter parsedFilter = parseFilter(filter);
+    com.aves.flamingodb.core.Filter parsedFilter = parseFilter(filter);
     if (parsedFilter.getFilters().isEmpty()) {
       // Return the existing query if not adding any more filters (because composite filter is
       // empty).
@@ -424,7 +424,7 @@ public class Query {
     checkNotNull(fieldPath, "Provided field path must not be null.");
     checkNotNull(op, "Provided op must not be null.");
     Value fieldValue;
-    com.google.firebase.firestore.model.FieldPath internalPath = fieldPath.getInternalPath();
+    com.aves.flamingodb.model.FieldPath internalPath = fieldPath.getInternalPath();
     if (internalPath.isKeyField()) {
       if (op == Operator.ARRAY_CONTAINS || op == Operator.ARRAY_CONTAINS_ANY) {
         throw new IllegalArgumentException(
@@ -458,11 +458,11 @@ public class Query {
    * Takes a {@link Filter.CompositeFilter} object, parses each of its subfilters, and returns a new
    * {@link Filter} that is constructed using the parsed values.
    */
-  private com.google.firebase.firestore.core.Filter parseCompositeFilter(
+  private com.aves.flamingodb.core.Filter parseCompositeFilter(
       Filter.CompositeFilter compositeFilterData) {
-    List<com.google.firebase.firestore.core.Filter> parsedFilters = new ArrayList<>();
+    List<com.aves.flamingodb.core.Filter> parsedFilters = new ArrayList<>();
     for (Filter filter : compositeFilterData.getFilters()) {
-      com.google.firebase.firestore.core.Filter parsedFilter = parseFilter(filter);
+      com.aves.flamingodb.core.Filter parsedFilter = parseFilter(filter);
       if (!parsedFilter.getFilters().isEmpty()) {
         parsedFilters.add(parsedFilter);
       }
@@ -480,7 +480,7 @@ public class Query {
    * Takes a filter whose value has not been parsed, parses the value object and returns a
    * FieldFilter or CompositeFilter with parsed values.
    */
-  private com.google.firebase.firestore.core.Filter parseFilter(Filter filter) {
+  private com.aves.flamingodb.core.Filter parseFilter(Filter filter) {
     hardAssert(
         filter instanceof Filter.UnaryFilter || filter instanceof Filter.CompositeFilter,
         "Parsing is only supported for Filter.UnaryFilter and Filter.CompositeFilter.");
@@ -569,7 +569,7 @@ public class Query {
 
   /** Checks that adding the given field filter to the given query yields a valid query */
   private void validateNewFieldFilter(
-      com.google.firebase.firestore.core.Query query,
+      com.aves.flamingodb.core.Query query,
       FieldFilter fieldFilter) {
     Operator filterOp = fieldFilter.getOperator();
 
@@ -591,8 +591,8 @@ public class Query {
   }
 
   /** Checks that adding the given filter to the current query is valid */
-  private void validateNewFilter(com.google.firebase.firestore.core.Filter filter) {
-    com.google.firebase.firestore.core.Query testQuery = query;
+  private void validateNewFilter(com.aves.flamingodb.core.Filter filter) {
+    com.aves.flamingodb.core.Query testQuery = query;
     for (FieldFilter subfilter : filter.getFlattenedFilters()) {
       validateNewFieldFilter(testQuery, subfilter);
       testQuery = testQuery.filter(subfilter);
@@ -605,8 +605,8 @@ public class Query {
    */
   @Nullable
   private Operator findOpInsideFilters(
-      List<com.google.firebase.firestore.core.Filter> filters, List<Operator> operators) {
-    for (com.google.firebase.firestore.core.Filter filter : filters) {
+      List<com.aves.flamingodb.core.Filter> filters, List<Operator> operators) {
+    for (com.aves.flamingodb.core.Filter filter : filters) {
       for (FieldFilter fieldFilter : filter.getFlattenedFilters()) {
         if (operators.contains(fieldFilter.getOperator())) {
           return fieldFilter.getOperator();
@@ -667,7 +667,7 @@ public class Query {
   }
 
   private Query orderBy(
-      @NonNull com.google.firebase.firestore.model.FieldPath fieldPath,
+      @NonNull com.aves.flamingodb.model.FieldPath fieldPath,
       @NonNull Direction direction) {
     checkNotNull(direction, "Provided direction must not be null.");
     if (query.getStartAt() != null) {
@@ -862,7 +862,7 @@ public class Query {
     // continues/ends exactly at the provided document. Without the key (by using the explicit sort
     // orders), multiple documents could match the position, yielding duplicate results.
     for (OrderBy orderBy : query.getNormalizedOrderBy()) {
-      if (orderBy.getField().equals(com.google.firebase.firestore.model.FieldPath.KEY_PATH)) {
+      if (orderBy.getField().equals(com.aves.flamingodb.model.FieldPath.KEY_PATH)) {
         components.add(Values.refValue(firestore.getDatabaseId(), document.getKey()));
       } else {
         Value value = document.getField(orderBy.getField());
@@ -903,7 +903,7 @@ public class Query {
     for (int i = 0; i < values.length; i++) {
       Object rawValue = values[i];
       OrderBy orderBy = explicitOrderBy.get(i);
-      if (orderBy.getField().equals(com.google.firebase.firestore.model.FieldPath.KEY_PATH)) {
+      if (orderBy.getField().equals(com.aves.flamingodb.model.FieldPath.KEY_PATH)) {
         if (!(rawValue instanceof String)) {
           throw new IllegalArgumentException(
               "Invalid query. Expected a string for document ID in "

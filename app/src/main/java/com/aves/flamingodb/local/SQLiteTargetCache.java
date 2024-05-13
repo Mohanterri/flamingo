@@ -14,18 +14,18 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import android.database.sqlite.SQLiteStatement;
 import android.util.SparseArray;
 import androidx.annotation.Nullable;
 import com.google.firebase.Timestamp;
 import com.google.firebase.database.collection.ImmutableSortedSet;
-import com.google.firebase.firestore.core.Target;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.util.Consumer;
+import com.aves.flamingodb.core.Target;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.util.Consumer;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 /** Cached Queries backed by SQLite. */
@@ -99,7 +99,7 @@ final class SQLiteTargetCache implements TargetCache {
     String canonicalId = targetData.getTarget().getCanonicalId();
     Timestamp version = targetData.getSnapshotVersion().getTimestamp();
 
-    com.google.firebase.firestore.proto.Target targetProto =
+    com.aves.flamingodb.proto.Target targetProto =
         localSerializer.encodeTargetData(targetData);
 
     db.execute(
@@ -236,7 +236,7 @@ final class SQLiteTargetCache implements TargetCache {
   private TargetData decodeTargetData(byte[] bytes) {
     try {
       return localSerializer.decodeTargetData(
-          com.google.firebase.firestore.proto.Target.parseFrom(bytes));
+          com.aves.flamingodb.proto.Target.parseFrom(bytes));
     } catch (InvalidProtocolBufferException e) {
       throw fail("TargetData failed to parse: %s", e);
     }

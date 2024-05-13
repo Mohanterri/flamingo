@@ -14,11 +14,11 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
-import com.google.firebase.firestore.model.BasePath;
-import com.google.firebase.firestore.model.FieldPath;
-import com.google.firebase.firestore.model.ResourcePath;
+import com.aves.flamingodb.model.BasePath;
+import com.aves.flamingodb.model.FieldPath;
+import com.aves.flamingodb.model.ResourcePath;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

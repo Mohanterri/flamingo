@@ -20,9 +20,9 @@ import android.os.Looper;
 import androidx.annotation.Nullable;
 import com.google.android.gms.tasks.Continuation;
 import com.google.cloud.datastore.core.number.NumberComparisonHelper;
-import com.google.firebase.firestore.FieldPath;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.FirebaseFirestoreException.Code;
+import com.aves.flamingodb.FieldPath;
+import com.aves.flamingodb.FirebaseFirestoreException;
+import com.aves.flamingodb.FirebaseFirestoreException.Code;
 import com.google.protobuf.ByteString;
 import io.grpc.Status;
 import io.grpc.StatusException;
@@ -57,10 +57,6 @@ public class Util {
     return builder.toString();
   }
 
-  /**
-   * Utility function to compare booleans. Note that we can't use Boolean.compare because it's only
-   * available after Android 19.
-   */
   public static int compareBooleans(boolean b1, boolean b2) {
     if (b1 == b2) {
       return 0;
@@ -113,10 +109,6 @@ public class Util {
         statusException.getMessage(), Code.fromValue(error.getCode().value()), statusException);
   }
 
-  /**
-   * If an exception is a StatusException, convert it to a FirebaseFirestoreException. Otherwise,
-   * leave it untouched.
-   */
   private static Exception convertStatusException(Exception e) {
     if (e instanceof StatusException) {
       StatusException statusException = (StatusException) e;
@@ -129,7 +121,6 @@ public class Util {
     }
   }
 
-  /** Turns a Throwable into an exception, converting it from a StatusException if necessary. */
   public static Exception convertThrowableToException(Throwable t) {
     if (t instanceof Exception) {
       return Util.convertStatusException((Exception) t);

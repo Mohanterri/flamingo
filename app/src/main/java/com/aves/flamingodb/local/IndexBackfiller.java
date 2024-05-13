@@ -17,11 +17,11 @@ package com.aves.flamingodb.local;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import com.google.common.base.Supplier;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldIndex.IndexOffset;
-import com.google.firebase.firestore.util.AsyncQueue;
-import com.google.firebase.firestore.util.Logger;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldIndex.IndexOffset;
+import com.aves.flamingodb.util.AsyncQueue;
+import com.aves.flamingodb.util.Logger;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -63,7 +63,7 @@ public class IndexBackfiller {
     this.localDocumentsViewOfCurrentUser = localDocumentsViewOfCurrentUser;
   }
 
-  public class Scheduler implements com.google.firebase.firestore.local.Scheduler {
+  public class Scheduler implements com.aves.flamingodb.local.Scheduler {
     @Nullable private AsyncQueue.DelayedTask backfillTask;
     private final AsyncQueue asyncQueue;
 

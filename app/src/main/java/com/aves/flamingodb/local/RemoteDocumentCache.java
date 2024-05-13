@@ -14,11 +14,11 @@
 
 package com.aves.flamingodb.local;
 
-import com.google.firebase.firestore.core.Query;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldIndex.IndexOffset;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.SnapshotVersion;
+import com.aves.flamingodb.core.Query;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldIndex.IndexOffset;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.SnapshotVersion;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;

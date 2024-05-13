@@ -15,7 +15,7 @@
 package com.aves.flamingodb.remote;
 
 import com.google.firebase.database.collection.ImmutableSortedSet;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.model.DocumentKey;
 import com.google.protobuf.ByteString;
 
 /**

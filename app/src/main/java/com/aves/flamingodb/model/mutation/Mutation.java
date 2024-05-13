@@ -14,15 +14,15 @@
 
 package com.aves.flamingodb.model.mutation;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldPath;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.ObjectValue;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldPath;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.ObjectValue;
 import com.google.firestore.v1.Value;
 import java.util.ArrayList;
 import java.util.HashMap;

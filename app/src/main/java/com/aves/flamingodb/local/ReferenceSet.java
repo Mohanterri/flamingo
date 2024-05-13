@@ -17,7 +17,7 @@ package com.aves.flamingodb.local;
 import static java.util.Collections.emptyList;
 
 import com.google.firebase.database.collection.ImmutableSortedSet;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.model.DocumentKey;
 import java.util.Iterator;
 
 /**

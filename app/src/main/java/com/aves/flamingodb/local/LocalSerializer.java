@@ -14,23 +14,23 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Assert.fail;
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.bundle.BundledQuery;
-import com.google.firebase.firestore.core.Query.LimitType;
-import com.google.firebase.firestore.core.Target;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldIndex;
-import com.google.firebase.firestore.model.FieldPath;
-import com.google.firebase.firestore.model.MutableDocument;
-import com.google.firebase.firestore.model.ObjectValue;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.model.mutation.Mutation;
-import com.google.firebase.firestore.model.mutation.MutationBatch;
-import com.google.firebase.firestore.remote.RemoteSerializer;
+import com.aves.flamingodb.bundle.BundledQuery;
+import com.aves.flamingodb.core.Query.LimitType;
+import com.aves.flamingodb.core.Target;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldIndex;
+import com.aves.flamingodb.model.FieldPath;
+import com.aves.flamingodb.model.MutableDocument;
+import com.aves.flamingodb.model.ObjectValue;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.model.mutation.Mutation;
+import com.aves.flamingodb.model.mutation.MutationBatch;
+import com.aves.flamingodb.remote.RemoteSerializer;
 import com.google.firestore.admin.v1.Index;
 import com.google.firestore.v1.DocumentTransform.FieldTransform;
 import com.google.firestore.v1.Write;
@@ -49,9 +49,9 @@ public final class LocalSerializer {
   }
 
   /** Encodes a MaybeDocument model to the equivalent protocol buffer for local storage. */
-  com.google.firebase.firestore.proto.MaybeDocument encodeMaybeDocument(Document document) {
-    com.google.firebase.firestore.proto.MaybeDocument.Builder builder =
-        com.google.firebase.firestore.proto.MaybeDocument.newBuilder();
+  com.aves.flamingodb.proto.MaybeDocument encodeMaybeDocument(Document document) {
+    com.aves.flamingodb.proto.MaybeDocument.Builder builder =
+        com.aves.flamingodb.proto.MaybeDocument.newBuilder();
 
     if (document.isNoDocument()) {
       builder.setNoDocument(encodeNoDocument(document));
@@ -69,7 +69,7 @@ public final class LocalSerializer {
   }
 
   /** Decodes a MaybeDocument proto to the equivalent model. */
-  MutableDocument decodeMaybeDocument(com.google.firebase.firestore.proto.MaybeDocument proto) {
+  MutableDocument decodeMaybeDocument(com.aves.flamingodb.proto.MaybeDocument proto) {
     switch (proto.getDocumentTypeCase()) {
       case DOCUMENT:
         return decodeDocument(proto.getDocument(), proto.getHasCommittedMutations());
@@ -111,9 +111,9 @@ public final class LocalSerializer {
   }
 
   /** Encodes a NoDocument value to the equivalent proto. */
-  private com.google.firebase.firestore.proto.NoDocument encodeNoDocument(Document document) {
-    com.google.firebase.firestore.proto.NoDocument.Builder builder =
-        com.google.firebase.firestore.proto.NoDocument.newBuilder();
+  private com.aves.flamingodb.proto.NoDocument encodeNoDocument(Document document) {
+    com.aves.flamingodb.proto.NoDocument.Builder builder =
+        com.aves.flamingodb.proto.NoDocument.newBuilder();
     builder.setName(rpcSerializer.encodeKey(document.getKey()));
     builder.setReadTime(rpcSerializer.encodeTimestamp(document.getVersion().getTimestamp()));
     return builder.build();
@@ -121,7 +121,7 @@ public final class LocalSerializer {
 
   /** Decodes a NoDocument proto to the equivalent model. */
   private MutableDocument decodeNoDocument(
-      com.google.firebase.firestore.proto.NoDocument proto, boolean hasCommittedMutations) {
+      com.aves.flamingodb.proto.NoDocument proto, boolean hasCommittedMutations) {
     DocumentKey key = rpcSerializer.decodeKey(proto.getName());
     SnapshotVersion version = rpcSerializer.decodeVersion(proto.getReadTime());
     MutableDocument result = MutableDocument.newNoDocument(key, version);
@@ -129,10 +129,10 @@ public final class LocalSerializer {
   }
 
   /** Encodes a UnknownDocument value to the equivalent proto. */
-  private com.google.firebase.firestore.proto.UnknownDocument encodeUnknownDocument(
+  private com.aves.flamingodb.proto.UnknownDocument encodeUnknownDocument(
       Document document) {
-    com.google.firebase.firestore.proto.UnknownDocument.Builder builder =
-        com.google.firebase.firestore.proto.UnknownDocument.newBuilder();
+    com.aves.flamingodb.proto.UnknownDocument.Builder builder =
+        com.aves.flamingodb.proto.UnknownDocument.newBuilder();
     builder.setName(rpcSerializer.encodeKey(document.getKey()));
     builder.setVersion(rpcSerializer.encodeTimestamp(document.getVersion().getTimestamp()));
     return builder.build();
@@ -140,16 +140,16 @@ public final class LocalSerializer {
 
   /** Decodes a UnknownDocument proto to the equivalent model. */
   private MutableDocument decodeUnknownDocument(
-      com.google.firebase.firestore.proto.UnknownDocument proto) {
+      com.aves.flamingodb.proto.UnknownDocument proto) {
     DocumentKey key = rpcSerializer.decodeKey(proto.getName());
     SnapshotVersion version = rpcSerializer.decodeVersion(proto.getVersion());
     return MutableDocument.newUnknownDocument(key, version);
   }
 
   /** Encodes a MutationBatch model for local storage in the mutation queue. */
-  com.google.firebase.firestore.proto.WriteBatch encodeMutationBatch(MutationBatch batch) {
-    com.google.firebase.firestore.proto.WriteBatch.Builder result =
-        com.google.firebase.firestore.proto.WriteBatch.newBuilder();
+  com.aves.flamingodb.proto.WriteBatch encodeMutationBatch(MutationBatch batch) {
+    com.aves.flamingodb.proto.WriteBatch.Builder result =
+        com.aves.flamingodb.proto.WriteBatch.newBuilder();
 
     result.setBatchId(batch.getBatchId());
     result.setLocalWriteTime(rpcSerializer.encodeTimestamp(batch.getLocalWriteTime()));
@@ -163,7 +163,7 @@ public final class LocalSerializer {
   }
 
   /** Decodes a WriteBatch proto into a MutationBatch model. */
-  MutationBatch decodeMutationBatch(com.google.firebase.firestore.proto.WriteBatch batch) {
+  MutationBatch decodeMutationBatch(com.aves.flamingodb.proto.WriteBatch batch) {
     int batchId = batch.getBatchId();
     Timestamp localWriteTime = rpcSerializer.decodeTimestamp(batch.getLocalWriteTime());
 
@@ -203,15 +203,15 @@ public final class LocalSerializer {
     return new MutationBatch(batchId, localWriteTime, baseMutations, mutations);
   }
 
-  com.google.firebase.firestore.proto.Target encodeTargetData(TargetData targetData) {
+  com.aves.flamingodb.proto.Target encodeTargetData(TargetData targetData) {
     hardAssert(
         QueryPurpose.LISTEN.equals(targetData.getPurpose()),
         "Only queries with purpose %s may be stored, got %s",
         QueryPurpose.LISTEN,
         targetData.getPurpose());
 
-    com.google.firebase.firestore.proto.Target.Builder result =
-        com.google.firebase.firestore.proto.Target.newBuilder();
+    com.aves.flamingodb.proto.Target.Builder result =
+        com.aves.flamingodb.proto.Target.newBuilder();
 
     result
         .setTargetId(targetData.getTargetId())
@@ -231,7 +231,7 @@ public final class LocalSerializer {
     return result.build();
   }
 
-  TargetData decodeTargetData(com.google.firebase.firestore.proto.Target targetProto) {
+  TargetData decodeTargetData(com.aves.flamingodb.proto.Target targetProto) {
     int targetId = targetProto.getTargetId();
     SnapshotVersion version = rpcSerializer.decodeVersion(targetProto.getSnapshotVersion());
     SnapshotVersion lastLimboFreeSnapshotVersion =

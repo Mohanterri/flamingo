@@ -14,9 +14,9 @@
 
 package com.aves.flamingodb.model.mutation;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
-import com.google.firebase.firestore.model.SnapshotVersion;
+import com.aves.flamingodb.model.SnapshotVersion;
 import com.google.firestore.v1.Value;
 import java.util.List;
 

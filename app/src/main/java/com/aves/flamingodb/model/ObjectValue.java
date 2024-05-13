@@ -14,11 +14,11 @@
 
 package com.aves.flamingodb.model;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.model.mutation.FieldMask;
+import com.aves.flamingodb.model.mutation.FieldMask;
 import com.google.firestore.v1.MapValue;
 import com.google.firestore.v1.Value;
 import java.util.HashMap;

@@ -16,10 +16,10 @@ package com.aves.flamingodb.local;
 
 import androidx.annotation.Nullable;
 import com.google.firebase.database.collection.ImmutableSortedSet;
-import com.google.firebase.firestore.core.Target;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.util.Consumer;
+import com.aves.flamingodb.core.Target;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.util.Consumer;
 
 /**
  * Represents cached targets received from the remote backend. This contains both a mapping between

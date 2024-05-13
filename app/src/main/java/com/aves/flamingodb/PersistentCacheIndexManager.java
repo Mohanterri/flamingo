@@ -16,7 +16,7 @@ package com.aves.flamingodb;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
-import com.google.firebase.firestore.core.FirestoreClient;
+import com.aves.flamingodb.core.FirestoreClient;
 
 /**
  * Persistent cache indexes can improve performance of local query execution. The {@code

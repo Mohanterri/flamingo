@@ -14,11 +14,11 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.model.DocumentCollections.emptyDocumentMap;
+import static com.aves.flamingodb.model.DocumentCollections.emptyDocumentMap;
 
 import com.google.firebase.database.collection.ImmutableSortedMap;
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
 import java.util.Map;
 
 /**

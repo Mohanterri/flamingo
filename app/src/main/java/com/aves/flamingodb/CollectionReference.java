@@ -14,18 +14,18 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.util.Executors;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.DocumentReference;
+import com.aves.flamingodb.FirebaseFirestore;
+import com.aves.flamingodb.Query;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.util.Executors;
+import com.aves.flamingodb.util.Util;
 
 /**
  * A {@code CollectionReference} can be used for adding documents, getting document references, and
@@ -38,7 +38,7 @@ import com.google.firebase.firestore.util.Util;
 public class CollectionReference extends Query {
 
   CollectionReference(ResourcePath path, FirebaseFirestore firestore) {
-    super(com.google.firebase.firestore.core.Query.atPath(path), firestore);
+    super(com.aves.flamingodb.core.Query.atPath(path), firestore);
     if (path.length() % 2 != 1) {
       throw new IllegalArgumentException(
           "Invalid collection reference. Collection references must have an odd number "

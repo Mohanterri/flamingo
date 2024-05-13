@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.bundle;
 
-import com.google.firebase.firestore.core.Query;
-import com.google.firebase.firestore.core.Target;
+import com.aves.flamingodb.core.Query;
+import com.aves.flamingodb.core.Target;
 
 /** A bundled query represents a query target and its limit. */
 public class BundledQuery implements BundleElement {

@@ -14,16 +14,16 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.AnyThread;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import com.google.auto.value.AutoValue;
-import com.google.firebase.firestore.ListenerRegistration;
-import com.google.firebase.firestore.model.DatabaseId;
-import com.google.firebase.firestore.remote.WatchChangeAggregator.BloomFilterApplicationStatus;
+import com.aves.flamingodb.ListenerRegistration;
+import com.aves.flamingodb.model.DatabaseId;
+import com.aves.flamingodb.remote.WatchChangeAggregator.BloomFilterApplicationStatus;
 import com.google.firestore.v1.BloomFilter;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicReference;
@@ -168,7 +168,7 @@ final class TestingHooks {
         int localCacheCount,
         ExistenceFilter existenceFilter,
         DatabaseId databaseId,
-        @Nullable com.google.firebase.firestore.remote.BloomFilter bloomFilter,
+        @Nullable com.aves.flamingodb.remote.BloomFilter bloomFilter,
         BloomFilterApplicationStatus bloomFilterStatus) {
       return create(
           localCacheCount,
@@ -183,7 +183,7 @@ final class TestingHooks {
   abstract static class ExistenceFilterBloomFilterInfo {
 
     static ExistenceFilterBloomFilterInfo create(
-        @Nullable com.google.firebase.firestore.remote.BloomFilter bloomFilter,
+        @Nullable com.aves.flamingodb.remote.BloomFilter bloomFilter,
         boolean applied,
         int hashCount,
         int bitmapLength,
@@ -194,7 +194,7 @@ final class TestingHooks {
 
     /** The BloomFilter created from the existence filter; may be null if creating it failed. */
     @Nullable
-    abstract com.google.firebase.firestore.remote.BloomFilter bloomFilter();
+    abstract com.aves.flamingodb.remote.BloomFilter bloomFilter();
 
     /**
      * Returns whether a full requery was averted by using the bloom filter. If false, then
@@ -214,7 +214,7 @@ final class TestingHooks {
 
     @Nullable
     static ExistenceFilterBloomFilterInfo from(
-        @Nullable com.google.firebase.firestore.remote.BloomFilter bloomFilter,
+        @Nullable com.aves.flamingodb.remote.BloomFilter bloomFilter,
         BloomFilterApplicationStatus bloomFilterStatus,
         ExistenceFilter existenceFilter) {
       BloomFilter unchangedNames = existenceFilter.getUnchangedNames();

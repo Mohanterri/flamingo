@@ -14,21 +14,21 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.core.FieldFilter.Operator.ARRAY_CONTAINS;
-import static com.google.firebase.firestore.core.FieldFilter.Operator.ARRAY_CONTAINS_ANY;
-import static com.google.firebase.firestore.model.Values.MAX_VALUE;
-import static com.google.firebase.firestore.model.Values.MIN_VALUE;
-import static com.google.firebase.firestore.model.Values.lowerBoundCompare;
-import static com.google.firebase.firestore.model.Values.upperBoundCompare;
+import static com.aves.flamingodb.core.FieldFilter.Operator.ARRAY_CONTAINS;
+import static com.aves.flamingodb.core.FieldFilter.Operator.ARRAY_CONTAINS_ANY;
+import static com.aves.flamingodb.model.Values.MAX_VALUE;
+import static com.aves.flamingodb.model.Values.MIN_VALUE;
+import static com.aves.flamingodb.model.Values.lowerBoundCompare;
+import static com.aves.flamingodb.model.Values.upperBoundCompare;
 
 import android.util.Pair;
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.core.OrderBy.Direction;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldIndex;
-import com.google.firebase.firestore.model.FieldPath;
-import com.google.firebase.firestore.model.ResourcePath;
-import com.google.firebase.firestore.model.Values;
+import com.aves.flamingodb.core.OrderBy.Direction;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldIndex;
+import com.aves.flamingodb.model.FieldPath;
+import com.aves.flamingodb.model.ResourcePath;
+import com.aves.flamingodb.model.Values;
 import com.google.firestore.v1.Value;
 import java.util.ArrayList;
 import java.util.Collection;

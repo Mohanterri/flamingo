@@ -14,20 +14,20 @@
 
 package com.aves.flamingodb.remote;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import android.content.Context;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
-import com.google.firebase.firestore.BuildConfig;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.FirebaseFirestoreException.Code;
-import com.google.firebase.firestore.auth.CredentialsProvider;
-import com.google.firebase.firestore.auth.User;
-import com.google.firebase.firestore.core.DatabaseInfo;
-import com.google.firebase.firestore.model.DatabaseId;
-import com.google.firebase.firestore.util.AsyncQueue;
-import com.google.firebase.firestore.util.Util;
+import com.aves.flamingodb.BuildConfig;
+import com.aves.flamingodb.FirebaseFirestoreException;
+import com.aves.flamingodb.FirebaseFirestoreException.Code;
+import com.aves.flamingodb.auth.CredentialsProvider;
+import com.aves.flamingodb.auth.User;
+import com.aves.flamingodb.core.DatabaseInfo;
+import com.aves.flamingodb.model.DatabaseId;
+import com.aves.flamingodb.util.AsyncQueue;
+import com.aves.flamingodb.util.Util;
 import io.grpc.ClientCall;
 import io.grpc.ForwardingClientCall;
 import io.grpc.Metadata;

@@ -14,10 +14,10 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.util.Assert.fail;
+import static com.aves.flamingodb.util.Assert.fail;
 
-import com.google.firebase.firestore.core.DocumentViewChange.Type;
-import com.google.firebase.firestore.model.DocumentKey;
+import com.aves.flamingodb.core.DocumentViewChange.Type;
+import com.aves.flamingodb.model.DocumentKey;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;

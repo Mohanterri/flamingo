@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb.util;
 
-import com.google.firebase.firestore.util.AsyncQueue.DelayedTask;
-import com.google.firebase.firestore.util.AsyncQueue.TimerId;
+import com.aves.flamingodb.util.AsyncQueue.DelayedTask;
+import com.aves.flamingodb.util.AsyncQueue.TimerId;
 import java.util.Date;
 
 /** Helper to implement exponential backoff. */

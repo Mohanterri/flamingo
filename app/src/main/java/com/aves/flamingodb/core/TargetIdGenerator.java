@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 /**
  * Generates monotonically increasing target IDs for sending targets to the watch stream.

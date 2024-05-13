@@ -14,27 +14,27 @@
  * limitations under the License.
  */
 
-package com.google.firebase.firestore.ktx
+package com.aves.flamingodb.ktx
 
 import androidx.annotation.Keep
 import com.google.firebase.FirebaseApp
 import com.google.firebase.components.Component
 import com.google.firebase.components.ComponentRegistrar
-import com.google.firebase.firestore.DocumentReference
-import com.google.firebase.firestore.DocumentSnapshot
-import com.google.firebase.firestore.EventListener
-import com.google.firebase.firestore.FieldPath
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.FirebaseFirestoreSettings
-import com.google.firebase.firestore.MemoryCacheSettings
-import com.google.firebase.firestore.MemoryEagerGcSettings
-import com.google.firebase.firestore.MemoryLruGcSettings
-import com.google.firebase.firestore.MetadataChanges
-import com.google.firebase.firestore.PersistentCacheSettings
-import com.google.firebase.firestore.Query
-import com.google.firebase.firestore.QueryDocumentSnapshot
-import com.google.firebase.firestore.QuerySnapshot
-import com.google.firebase.firestore.util.Executors.BACKGROUND_EXECUTOR
+import com.aves.flamingodb.DocumentReference
+import com.aves.flamingodb.DocumentSnapshot
+import com.aves.flamingodb.EventListener
+import com.aves.flamingodb.FieldPath
+import com.aves.flamingodb.FirebaseFirestore
+import com.aves.flamingodb.FirebaseFirestoreSettings
+import com.aves.flamingodb.MemoryCacheSettings
+import com.aves.flamingodb.MemoryEagerGcSettings
+import com.aves.flamingodb.MemoryLruGcSettings
+import com.aves.flamingodb.MetadataChanges
+import com.aves.flamingodb.PersistentCacheSettings
+import com.aves.flamingodb.Query
+import com.aves.flamingodb.QueryDocumentSnapshot
+import com.aves.flamingodb.QuerySnapshot
+import com.aves.flamingodb.util.Executors.BACKGROUND_EXECUTOR
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.channels.awaitClose

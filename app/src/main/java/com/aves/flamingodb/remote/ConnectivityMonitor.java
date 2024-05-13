@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.remote;
 
-import com.google.firebase.firestore.util.Consumer;
+import com.aves.flamingodb.util.Consumer;
 
 /** Interface for monitoring changes in network connectivity/reachability. */
 public interface ConnectivityMonitor {

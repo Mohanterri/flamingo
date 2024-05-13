@@ -14,12 +14,12 @@
 
 package com.aves.flamingodb.local;
 
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.core.Target;
-import com.google.firebase.firestore.model.SnapshotVersion;
-import com.google.firebase.firestore.remote.WatchStream;
+import com.aves.flamingodb.core.Target;
+import com.aves.flamingodb.model.SnapshotVersion;
+import com.aves.flamingodb.remote.WatchStream;
 import com.google.protobuf.ByteString;
 import java.util.Objects;
 

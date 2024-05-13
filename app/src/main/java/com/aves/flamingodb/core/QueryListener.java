@@ -14,13 +14,13 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.Nullable;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.ListenSource;
-import com.google.firebase.firestore.core.DocumentViewChange.Type;
+import com.aves.flamingodb.EventListener;
+import com.aves.flamingodb.FirebaseFirestoreException;
+import com.aves.flamingodb.ListenSource;
+import com.aves.flamingodb.core.DocumentViewChange.Type;
 import java.util.ArrayList;
 import java.util.List;
 

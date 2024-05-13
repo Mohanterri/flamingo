@@ -14,11 +14,11 @@
 
 package com.aves.flamingodb.core;
 
-import static com.google.firebase.firestore.core.KeyFieldInFilter.extractDocumentKeysFromArrayValue;
+import static com.aves.flamingodb.core.KeyFieldInFilter.extractDocumentKeysFromArrayValue;
 
-import com.google.firebase.firestore.model.Document;
-import com.google.firebase.firestore.model.DocumentKey;
-import com.google.firebase.firestore.model.FieldPath;
+import com.aves.flamingodb.model.Document;
+import com.aves.flamingodb.model.DocumentKey;
+import com.aves.flamingodb.model.FieldPath;
 import com.google.firestore.v1.Value;
 import java.util.ArrayList;
 import java.util.List;

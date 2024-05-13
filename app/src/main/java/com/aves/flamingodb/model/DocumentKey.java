@@ -14,7 +14,7 @@
 
 package com.aves.flamingodb.model;
 
-import static com.google.firebase.firestore.util.Assert.hardAssert;
+import static com.aves.flamingodb.util.Assert.hardAssert;
 
 import androidx.annotation.NonNull;
 import com.google.firebase.database.collection.ImmutableSortedSet;

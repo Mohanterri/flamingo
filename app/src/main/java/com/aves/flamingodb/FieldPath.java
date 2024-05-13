@@ -14,8 +14,8 @@
 
 package com.aves.flamingodb;
 
-import static com.google.firebase.firestore.util.Preconditions.checkArgument;
-import static com.google.firebase.firestore.util.Preconditions.checkNotNull;
+import static com.aves.flamingodb.util.Preconditions.checkArgument;
+import static com.aves.flamingodb.util.Preconditions.checkNotNull;
 
 import androidx.annotation.NonNull;
 import java.util.Arrays;
@@ -31,17 +31,17 @@ public final class FieldPath {
   /** Matches any characters in a field path string that are reserved. */
   private static final Pattern RESERVED = Pattern.compile("[~*/\\[\\]]");
 
-  private final com.google.firebase.firestore.model.FieldPath internalPath;
+  private final com.aves.flamingodb.model.FieldPath internalPath;
 
   private FieldPath(List<String> segments) {
-    this.internalPath = com.google.firebase.firestore.model.FieldPath.fromSegments(segments);
+    this.internalPath = com.aves.flamingodb.model.FieldPath.fromSegments(segments);
   }
 
-  private FieldPath(com.google.firebase.firestore.model.FieldPath internalPath) {
+  private FieldPath(com.aves.flamingodb.model.FieldPath internalPath) {
     this.internalPath = internalPath;
   }
 
-  com.google.firebase.firestore.model.FieldPath getInternalPath() {
+  com.aves.flamingodb.model.FieldPath getInternalPath() {
     return internalPath;
   }
 
@@ -66,7 +66,7 @@ public final class FieldPath {
   }
 
   private static final FieldPath DOCUMENT_ID_INSTANCE =
-      new FieldPath(com.google.firebase.firestore.model.FieldPath.KEY_PATH);
+      new FieldPath(com.aves.flamingodb.model.FieldPath.KEY_PATH);
 
   /**
    * Returns A special sentinel {@code FieldPath} to refer to the ID of a document. It can be used
@@ -85,7 +85,7 @@ public final class FieldPath {
     try {
       // By default, split() doesn't return empty leading and trailing segments. This can be enabled
       // by passing "-1" as the  limit.
-      return com.google.firebase.firestore.FieldPath.of(path.split("\\.", -1));
+      return com.aves.flamingodb.FieldPath.of(path.split("\\.", -1));
     } catch (IllegalArgumentException e) {
       throw new IllegalArgumentException(
           "Invalid field path ("
