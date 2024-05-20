@@ -29,6 +29,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -49,8 +52,15 @@ dependencies {
     implementation("io.grpc:grpc-netty-shaded:1.20.0")
     implementation("com.google.android.gms:play-services-tasks:18.1.0")
 
+    implementation("com.google.firebase:firebase-messaging:23.0.0")
+
     implementation("com.google.auto.value:auto-value-annotations:1.6")
+    implementation("androidx.concurrent:concurrent-futures:1.1.0")
     annotationProcessor("com.google.auto.value:auto-value:1.6")
+
+
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
 
 
     implementation(libs.appcompat)

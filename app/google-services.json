@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "258514287637",
+    "project_id": "aves-flamingo-db",
+    "storage_bucket": "aves-flamingo-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258514287637:android:36cfc6b374264733bda21c",
+        "android_client_info": {
+          "package_name": "com.aves.flamingodb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ0blI1fD59nn2ZJtZ9sIJWHPycd4r-2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

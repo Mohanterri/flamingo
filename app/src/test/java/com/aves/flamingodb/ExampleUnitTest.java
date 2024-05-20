@@ -1,4 +1,4 @@
-package com.aves.flamingodb;
+package com.aves.flamingodb.DatabaseStore;
 
 import org.junit.Test;
 

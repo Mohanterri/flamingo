@@ -1,4 +1,4 @@
-package com.aves.flamingodb;
+package com.aves.flamingodb.DatabaseStore;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.aves.flamingodb", appContext.getPackageName());
+        assertEquals("com.aves.flamingodb.DatabaseStore", appContext.getPackageName());
     }
 }
