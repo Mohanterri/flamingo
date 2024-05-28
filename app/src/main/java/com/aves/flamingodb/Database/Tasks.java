@@ -1,14 +1,13 @@
 package com.aves.flamingodb.Database;
 
+import android.util.Log;
 
 import com.aves.flamingodb.App.models.QuerySnapshot;
 
 public class Tasks extends QuerySnapshot {
 
-    private String source;
-
-    public Tasks(Query source, DatabaseStore databaseStore) {
-        super(source, databaseStore);
+    public Tasks(Query source, DatabaseStore databaseStore, String flagQuerry) {
+        super(source, databaseStore, flagQuerry);
     }
 
     @Override

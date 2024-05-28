@@ -2,20 +2,19 @@ package com.aves.flamingodb.App;
 
 import androidx.annotation.NonNull;
 
+import com.aves.flamingodb.App.core.EventsRegister;
 import com.aves.flamingodb.Database.Document;
 import com.aves.flamingodb.Database.Utils;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.IOException;
-
-import okhttp3.Request;
 
 public class FlamingoApp extends Utils {
 
     private static final String LOG_TAG = "FlamingoApp";
     private static FlamingoApp instance;
+    private EventsRegister eventsRegister = EventsRegister.getInstance();
 
     FlamingoApp(){
         super();
@@ -37,8 +36,23 @@ public class FlamingoApp extends Utils {
         return super.get();
     }
 
+    @NonNull
     @Override
     public void add(Document document) {
         super.add(document);
     }
+
+    @NonNull
+    @Override
+    public void delete() {
+        super.delete();
+    }
+
+    @NonNull
+    @Override
+    public JSONArray update(Document document) {
+        return super.update(document);
+    }
+
+
 }

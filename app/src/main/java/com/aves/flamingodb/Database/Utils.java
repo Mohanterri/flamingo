@@ -12,7 +12,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -25,7 +27,7 @@ import okhttp3.Response;
 public class Utils {
 
     protected static GlobalServices globalServices = GlobalServices.getInstance();;
-    protected OkHttpClient client = new OkHttpClient();;
+    protected OkHttpClient client = new OkHttpClient();
     protected Request connection;
     protected String DB_URL = "https://api-pouletafc.net/db/%s";
     protected String AUTH_URL = "https://api-pouletafc.net/auth/create-token";
@@ -44,14 +46,12 @@ public class Utils {
         if(globalServices.get("token") == null){
             try {
                 UID = getAuthorization();
-                Log.d("UID", UID);
+                globalServices.set("token", UID);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
-        return new Request.Builder()
-                .addHeader("Authorization", String.format("Bearer %s", UID))
-                .url(url);
+        return new Request.Builder().addHeader("Authorization", String.format("Bearer %s", UID)).url(url);
     }
 
     private String getAuthorization() throws IOException{
@@ -77,18 +77,30 @@ public class Utils {
 
     @Nonnull
     public JSONArray get() throws IOException {
-        String collection = DatabaseStore.getInstance().collection;
-        connection = connect(String.format(DB_URL, collection)).get().build();
-
+        String collection = DatabaseStore.getInstance().getCollection();
+        String filters = String.join("&", DatabaseStore.getInstance().getFilters());
+        connection = connect(String.format(DB_URL, String.format("%s/%s", collection, filters))).get().build();
         try (Response response = client.newCall(connection).execute()) {
-            return new JSONArray(response.body().string());
+            JSONArray jsonArray = new JSONArray(response.body().string());
+            return jsonArray;
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
     }
 
+    @Nonnull
     public void add(Document document){
 
+    }
+
+    @Nonnull
+    public void delete(){
+
+    }
+
+    @Nonnull
+    public JSONArray update(Document document){
+        return new JSONArray();
     }
 
     public static <T extends Object> T checkNotNull(@Nonnull T reference, @Nullable Object errorMessage) {

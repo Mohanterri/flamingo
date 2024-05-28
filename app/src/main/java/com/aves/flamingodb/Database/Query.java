@@ -35,10 +35,38 @@ public class Query {
         return get(this);
     }
 
+    public com.aves.flamingodb.App.models.QuerySnapshot delete(){
+        return delete(this);
+    }
+
+    public com.aves.flamingodb.App.models.QuerySnapshot update(){
+        return update(this);
+    }
+
+    public com.aves.flamingodb.App.models.QuerySnapshot add(){
+        return add(this);
+    }
+
     @NonNull
     public com.aves.flamingodb.App.models.QuerySnapshot get(@NonNull Query source) {
-        return new Tasks(source, databaseStore);
+        return new Tasks(source, databaseStore, "get");
     }
+
+    @NonNull
+    public com.aves.flamingodb.App.models.QuerySnapshot delete(@NonNull Query source) {
+        return new Tasks(source, databaseStore, "delete");
+    }
+
+    @NonNull
+    public com.aves.flamingodb.App.models.QuerySnapshot add(@NonNull Query source) {
+        return new Tasks(source, databaseStore, "add");
+    }
+
+    @NonNull
+    public com.aves.flamingodb.App.models.QuerySnapshot update(@NonNull Query source) {
+        return new Tasks(source, databaseStore, "update");
+    }
+
 
     public com.aves.flamingodb.App.models.Query add(HashMap<String, Object> object) {
         JsonUtils.mapToJson(object);

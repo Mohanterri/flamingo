@@ -11,7 +11,9 @@ public class DatabaseStore{
     private static DatabaseStore instance;
     private static FlamingoApp flamingoApp;
 
-    volatile String collection;
+    private String collection;
+    private String documentId;
+
     volatile ArrayList<String> filters = new ArrayList<>();
 
     private DatabaseStore(FlamingoApp flamingoApp){
@@ -51,9 +53,18 @@ public class DatabaseStore{
         return collection;
     }
 
+    public String getDocumentId() {
+        return documentId;
+    }
+
     public void delete() {
         //
     }
 
-
+    public DocumentReference document(String documentId) {
+        checkNotNull(documentId, "Provided collection must not be null.");
+        this.documentId = documentId;
+        this.collection = String.format("%s/%s", collection, documentId);
+        return new DocumentReference(instance);
+    }
 }

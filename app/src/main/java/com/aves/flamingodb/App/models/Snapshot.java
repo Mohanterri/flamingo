@@ -25,4 +25,9 @@ public class Snapshot {
     public Object getData() {
         return data;
     }
+
+    public Object get(String field){
+        return null;
+    }
+
 }
